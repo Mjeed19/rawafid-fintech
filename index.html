@@ -29,12 +29,13 @@ body{
 nav{
   position:fixed;top:0;left:0;right:0;z-index:500;
   display:flex;align-items:center;justify-content:space-between;
-  padding:12px clamp(14px,4vw,48px);
+  padding:14px clamp(14px,4vw,48px) 16px;
   background:rgba(5,14,8,.97);backdrop-filter:blur(24px);
   border-bottom:1px solid rgba(61,170,134,.08);
+  overflow:visible;
 }
-.n-logo{display:flex;align-items:center}
-.n-brand{font-family:'Cairo',sans-serif;font-size:1.2rem;font-weight:800;color:rgba(255,255,255,.9);letter-spacing:-.2px;line-height:1.4}
+.n-logo{display:flex;align-items:center;overflow:visible}
+.n-brand{font-family:'Cairo',sans-serif;font-size:1.2rem;font-weight:800;color:rgba(255,255,255,.9);letter-spacing:-.2px;line-height:1.6;overflow:visible;display:inline-block}
 .n-brand-accent{color:var(--glt);font-weight:900}
 .n-links{display:flex;gap:20px;list-style:none}
 .n-links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.82rem;font-weight:500;transition:color .2s}
