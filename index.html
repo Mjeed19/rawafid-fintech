@@ -135,10 +135,33 @@ nav{
   gap:10px;padding:14px clamp(14px,3vw,20px);
   border-bottom:3px solid var(--green2);width:100%;
 }
-.rb2{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:18px 10px;text-align:center;transition:background .3s}
-.rb2:hover{background:rgba(255,255,255,.13)}
-.rb2-n{font-family:'Cairo',sans-serif;font-size:1.75rem;font-weight:900;color:#fff;line-height:1}
-.rb2-l{font-size:.68rem;color:rgba(255,255,255,.5);margin-top:5px}
+.rb2{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:12px;padding:20px 12px;text-align:center;
+  cursor:default;position:relative;overflow:hidden;
+  transition:transform .25s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease;
+}
+.rb2::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 50% 100%,rgba(61,170,134,.18) 0%,transparent 70%);
+  opacity:0;transition:opacity .3s;pointer-events:none;
+}
+.rb2:hover{
+  transform:translateY(-4px);
+  background:rgba(61,170,134,.12);
+  border-color:rgba(61,170,134,.4);
+  box-shadow:0 8px 24px rgba(61,170,134,.2);
+}
+.rb2:hover::after{opacity:1}
+.rb2-n{
+  font-family:'Cairo',sans-serif;font-size:1.75rem;font-weight:900;
+  color:#fff;line-height:1;
+  transition:color .25s ease;
+}
+.rb2:hover .rb2-n{color:var(--glt)}
+.rb2-l{font-size:.68rem;color:rgba(255,255,255,.5);margin-top:6px;transition:color .25s}
+.rb2:hover .rb2-l{color:rgba(255,255,255,.75)}
 
 /* ═══ SECTIONS ═══ */
 .wrap{max-width:1220px;margin:0 auto;padding:0 clamp(14px,4vw,52px)}
