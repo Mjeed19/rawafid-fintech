@@ -180,13 +180,13 @@ nav{
 .reveal.visible{opacity:1;transform:translateY(0)}
 
 /* ═══ WHY GRID ═══ */
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:38px}
-.wc{background:var(--surf);border:1px solid var(--b1);border-radius:12px;padding:24px 20px;transition:all .3s cubic-bezier(.22,.68,0,1.2);position:relative;overflow:hidden}
-.wc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--green),transparent);transform:scaleX(0);transition:transform .4s}
-.wc:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(27,107,82,.09)}.wc:hover::after{transform:scaleX(1)}
-.wc-i{font-size:1.6rem;margin-bottom:12px;display:block}
-.wc-t{font-family:'Cairo',sans-serif;font-size:.9rem;font-weight:800;color:var(--ink);margin-bottom:6px}
-.wc-d{font-size:.8rem;color:var(--muted);line-height:1.8}
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:34px}
+.wc{background:var(--surf);border:1px solid var(--b1);border-radius:10px;padding:18px 16px;display:flex;align-items:flex-start;gap:14px;transition:border-color .2s,background .2s}
+.wc:hover{border-color:rgba(61,170,134,.35);background:rgba(61,170,134,.03)}
+.wc-i{font-size:1.4rem;flex-shrink:0;margin-top:2px}
+.wc-body{display:flex;flex-direction:column;gap:4px}
+.wc-t{font-family:'Cairo',sans-serif;font-size:.88rem;font-weight:800;color:var(--ink)}
+.wc-d{font-size:.78rem;color:var(--muted);line-height:1.75}
 
 /* ═══ PACKAGES ═══ */
 .pkgs{display:flex;flex-direction:column;gap:18px;margin-top:42px}
@@ -461,12 +461,12 @@ html,body{background-color:var(--green4)!important;overscroll-behavior:none;min-
       <h2 class="h2">ما الذي <em>تكسبه</em> مؤسستك؟</h2>
     </div>
     <div class="why-grid">
-      <div class="wc reveal"><span class="wc-i">👁️</span><div class="wc-t">ظهور أمام آلاف الطلبة</div><div class="wc-d">تواجد مباشر أمام أكثر من 3000 طالب وطالبة من كبرى جامعات الرياض المهتمين بالتقنية المالية</div></div>
-      <div class="wc reveal"><span class="wc-i">🎓</span><div class="wc-t">استقطاب المواهب</div><div class="wc-d">منصة مثالية للوصول للكفاءات الجامعية وتقديم فرص التدريب والتوظيف مباشرةً</div></div>
-      <div class="wc reveal"><span class="wc-i">📣</span><div class="wc-t">حضور إعلامي موثّق</div><div class="wc-d">ذكرك بلقبك الرسمي في كل إعلان على منصات المعرض قبل الفعالية وخلالها وبعدها</div></div>
-      <div class="wc reveal"><span class="wc-i">🤝</span><div class="wc-t">شراكة معرفية مؤسسية</div><div class="wc-d">ارتباط رسمي باسمك في أبرز فعالية فنتك أكاديمية بالرياض يعزز حضورك أمام الجيل الجامعي</div></div>
-      <div class="wc reveal"><span class="wc-i">📊</span><div class="wc-t">بيانات الحضور</div><div class="wc-d">تقرير ما بعد الفعالية بإحصاءات الحضور والتفاعل لقياس العائد على مشاركتك</div></div>
-      <div class="wc reveal"><span class="wc-i">🏆</span><div class="wc-t">تكريم رسمي</div><div class="wc-d">درع يُسلَّم رسمياً في حفل الختام وذكرك في البيانات الصحفية والدعوات الرسمية</div></div>
+      <div class="wc reveal"><span class="wc-i">👁️</span><div class="wc-body"><div class="wc-t">ظهور أمام آلاف الطلبة</div><div class="wc-d">تواجد مباشر أمام أكثر من 3000 طالب وطالبة من كبرى جامعات الرياض المهتمين بالتقنية المالية</div></div></div>
+      <div class="wc reveal"><span class="wc-i">🎓</span><div class="wc-body"><div class="wc-t">استقطاب المواهب</div><div class="wc-d">منصة مثالية للوصول للكفاءات الجامعية وتقديم فرص التدريب والتوظيف مباشرةً</div></div></div>
+      <div class="wc reveal"><span class="wc-i">📣</span><div class="wc-body"><div class="wc-t">حضور إعلامي موثّق</div><div class="wc-d">ذكرك بلقبك الرسمي في كل إعلان على منصات المعرض قبل الفعالية وخلالها وبعدها</div></div></div>
+      <div class="wc reveal"><span class="wc-i">🤝</span><div class="wc-body"><div class="wc-t">شراكة معرفية مؤسسية</div><div class="wc-d">ارتباط رسمي باسمك في أبرز فعالية فنتك أكاديمية بالرياض يعزز حضورك أمام الجيل الجامعي</div></div></div>
+      <div class="wc reveal"><span class="wc-i">📊</span><div class="wc-body"><div class="wc-t">بيانات الحضور</div><div class="wc-d">تقرير ما بعد الفعالية بإحصاءات الحضور والتفاعل لقياس العائد على مشاركتك</div></div></div>
+      <div class="wc reveal"><span class="wc-i">🏆</span><div class="wc-body"><div class="wc-t">تكريم رسمي</div><div class="wc-d">درع يُسلَّم رسمياً في حفل الختام وذكرك في البيانات الصحفية والدعوات الرسمية</div></div></div>
     </div>
   </div>
 </section>
