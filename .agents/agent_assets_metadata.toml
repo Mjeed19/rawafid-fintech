@@ -30,3 +30,9 @@ id = "Jn-Kz7wT-7Vht4K-Q3GYA"
 uri = "file://screenshots/poster_canva.jpg"
 type = "image"
 title = "بوستر JPG — واتساب وسوشيال ميديا"
+
+[[outputs]]
+id = "FgPjKLXf1GGKHadTT6E5A"
+uri = "file://rawafid_fintech_2026.pdf"
+type = "pdf"
+title = "بوستر PDF — معرض روافد فنتك 2026 قابل للتعديل"
