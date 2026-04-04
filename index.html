@@ -416,6 +416,22 @@ html,body{background-color:var(--green4)!important;overscroll-behavior:none;min-
 .vic{font-size:1.2rem;flex-shrink:0}
 .vlbl{font-size:.7rem;color:var(--muted);margin-bottom:2px}
 .vval{font-family:'Cairo',sans-serif;font-size:.95rem;font-weight:700;color:var(--ink)}
+
+/* ═══ MOBILE FIXES ═══ */
+@media(max-width:600px){
+  /* Booth: stack cards vertically */
+  .booth-grid{grid-template-columns:1fr!important;gap:14px}
+  .booth-card{padding:22px 18px}
+  .booth-btn{font-size:.82rem;padding:11px 14px;gap:6px}
+
+  /* Venue: stack text above image */
+  #venue .wrap > div{flex-direction:column!important}
+  #venue .wrap > div > div:first-child{min-width:0!important;width:100%}
+  #venue .wrap > div > div:last-child{min-width:0!important;width:100%;max-height:220px!important}
+  #venue .wrap > div > div:last-child img{height:220px!important}
+  #venue h2.h2{font-size:clamp(1.3rem,5.5vw,1.8rem)}
+  .btn-p[href*="maps"]{width:100%;justify-content:center;box-sizing:border-box}
+}
 </style>
 </head>
 <body style="background-color:#050E08">
