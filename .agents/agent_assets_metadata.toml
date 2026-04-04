@@ -18,3 +18,15 @@ id = "M-yM8Rfy5Kc5vi6xPrPXO"
 uri = "file://screenshots/poster_wa.jpg"
 type = "image"
 title = "بوستر واتساب — معرض روافد فنتك 2026"
+
+[[outputs]]
+id = "hXgfJBBsNsDJSFpFP8Qqt"
+uri = "file://screenshots/poster_canva.png"
+type = "image"
+title = "بوستر PNG — جاهز للرفع على كانفا"
+
+[[outputs]]
+id = "Jn-Kz7wT-7Vht4K-Q3GYA"
+uri = "file://screenshots/poster_canva.jpg"
+type = "image"
+title = "بوستر JPG — واتساب وسوشيال ميديا"
