@@ -14,19 +14,19 @@ html, body {
 }
 
 /* ──────────────────────────────────────
-   الحاوي  1080 × 2160 (نسبة 1:2)
+   الحاوي  1080 × 1800
 ────────────────────────────────────── */
 #poster {
-  width:1080px; height:2160px;
+  width:1080px; height:1800px;
   position:relative; overflow:hidden;
   transform-origin:top center;
   font-family:'Tajawal',sans-serif; color:#fff;
   flex-shrink:0;
 }
 
-/* ════  HERO  0–580  ════ */
+/* ════  HERO  0–520  ════ */
 .hero {
-  position:absolute; top:0; left:0; right:0; height:580px;
+  position:absolute; top:0; left:0; right:0; height:520px;
   overflow:hidden;
 }
 .hero-bg {
@@ -50,279 +50,313 @@ html, body {
 .ring { position:absolute; border-radius:50%; border:1.5px solid; pointer-events:none; }
 .r1{width:520px;height:520px;top:-100px;right:-140px;border-color:rgba(61,170,134,.13);}
 .r2{width:330px;height:330px;top:30px;right:-15px;border-color:rgba(61,170,134,.07);}
-.r3{width:175px;height:175px;top:170px;right:125px;border-color:rgba(61,170,134,.16);}
+.r3{width:175px;height:175px;top:155px;right:125px;border-color:rgba(61,170,134,.16);}
 .r4{width:280px;height:280px;bottom:-60px;left:-70px;border-color:rgba(212,168,75,.08);}
 
 .bg-year {
-  position:absolute; font-family:'Cairo',sans-serif; font-weight:900; font-size:20rem;
+  position:absolute; font-family:'Cairo',sans-serif; font-weight:900; font-size:18rem;
   color:rgba(255,255,255,.02); left:0; right:0; text-align:center;
-  top:50%; transform:translateY(-56%); letter-spacing:-.04em; line-height:1; user-select:none;
+  top:50%; transform:translateY(-55%); letter-spacing:-.04em; line-height:1; user-select:none;
 }
 .hero-inner {
   position:relative; z-index:5;
   display:flex; flex-direction:column; align-items:center; text-align:center;
-  padding:50px 60px 0;
+  padding:44px 60px 0;
 }
 .badge {
   display:inline-flex; align-items:center; gap:9px;
   background:rgba(61,170,134,.09); border:1px solid rgba(61,170,134,.32);
   border-radius:100px; padding:7px 22px;
   font-size:.72rem; font-weight:800; letter-spacing:3px; text-transform:uppercase;
-  color:#52c99f; margin-bottom:22px; box-shadow:0 0 18px rgba(61,170,134,.12);
+  color:#52c99f; margin-bottom:18px; box-shadow:0 0 18px rgba(61,170,134,.12);
 }
 .bdot{width:6px;height:6px;border-radius:50%;background:#52c99f;box-shadow:0 0 8px #52c99f;}
-.t-ar{font-family:'Cairo',sans-serif;font-size:3.6rem;font-weight:900;color:rgba(255,255,255,.88);line-height:1;}
+.t-ar{font-family:'Cairo',sans-serif;font-size:3.3rem;font-weight:900;color:rgba(255,255,255,.88);line-height:1;}
 .t-gr{
-  font-family:'Cairo',sans-serif;font-size:5.8rem;font-weight:900;line-height:1;
+  font-family:'Cairo',sans-serif;font-size:5.4rem;font-weight:900;line-height:1;
   background:linear-gradient(120deg,#3DAA86 0%,#52c99f 35%,#aaefce 65%,#3DAA86 100%);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  filter:drop-shadow(0 0 30px rgba(61,170,134,.32));
+  filter:drop-shadow(0 0 28px rgba(61,170,134,.32));
 }
 .t-yr{
-  font-family:'Cairo',sans-serif;font-size:4.8rem;font-weight:900;line-height:1;
-  background:linear-gradient(180deg,rgba(255,255,255,.17) 0%,rgba(255,255,255,.03) 100%);
+  font-family:'Cairo',sans-serif;font-size:4.4rem;font-weight:900;line-height:1;
+  background:linear-gradient(180deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,.03) 100%);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  margin-top:-10px;
+  margin-top:-8px;
 }
-.sub{font-size:.9rem;color:rgba(255,255,255,.4);line-height:2;margin-top:14px;}
-.sub strong{color:rgba(255,255,255,.76);}
-.stats{display:flex;gap:10px;margin-top:22px;}
+.sub{font-size:.88rem;color:rgba(255,255,255,.38);line-height:2;margin-top:12px;}
+.sub strong{color:rgba(255,255,255,.74);}
+.stats{display:flex;gap:10px;margin-top:20px;}
 .sc{
   display:flex;align-items:center;gap:10px;
   background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
-  border-radius:12px;padding:11px 18px;min-width:118px;
+  border-radius:12px;padding:10px 16px;min-width:112px;
 }
-.sc-ic{
-  width:34px;height:34px;border-radius:8px;
-  display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;
-}
-.sc-n{font-family:'Cairo',sans-serif;font-size:1.3rem;font-weight:900;line-height:1;}
-.sc-l{font-size:.6rem;color:rgba(255,255,255,.36);margin-top:2px;}
+.sc-ic{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;}
+.sc-n{font-family:'Cairo',sans-serif;font-size:1.2rem;font-weight:900;line-height:1;}
+.sc-l{font-size:.58rem;color:rgba(255,255,255,.34);margin-top:2px;}
 
-/* ════  STRIP  580–652  ════ */
+/* ════  STRIP  520–588  ════ */
 .strip{
-  position:absolute; top:580px; left:0; right:0; height:72px;
+  position:absolute; top:520px; left:0; right:0; height:68px;
   background:rgba(9,24,14,.97);
   border-top:1px solid rgba(61,170,134,.2);border-bottom:1px solid rgba(61,170,134,.1);
   display:flex; align-items:stretch;
 }
-.si{flex:1;display:flex;align-items:center;gap:12px;padding:0 26px;}
+.si{flex:1;display:flex;align-items:center;gap:12px;padding:0 24px;}
 .si+.si{border-right:1px solid rgba(255,255,255,.07);}
-.si-orb{
-  width:36px;height:36px;border-radius:9px;flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;font-size:1rem;
-  background:rgba(61,170,134,.1);border:1px solid rgba(61,170,134,.2);
-}
-.si-lbl{font-size:.55rem;color:rgba(255,255,255,.28);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;}
-.si-val{font-family:'Cairo',sans-serif;font-size:.92rem;font-weight:800;}
+.si-orb{width:34px;height:34px;border-radius:9px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.95rem;background:rgba(61,170,134,.1);border:1px solid rgba(61,170,134,.2);}
+.si-lbl{font-size:.54rem;color:rgba(255,255,255,.28);letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px;}
+.si-val{font-family:'Cairo',sans-serif;font-size:.9rem;font-weight:800;}
 
-/* ════  PACKAGES  652–1360  ════ */
+/* ════  PACKAGES  588–930  ════ */
 .pkg-sec{
-  position:absolute; top:652px; left:0; right:0; height:708px;
+  position:absolute; top:588px; left:0; right:0; height:342px;
   background:linear-gradient(180deg,#050E08 0%,#071210 50%,#050E08 100%);
-  padding:32px 48px 0; overflow:hidden;
+  padding:28px 48px 0; overflow:hidden;
 }
 .pkg-sec::before{
-  content:'';position:absolute;width:460px;height:460px;border-radius:50%;
-  background:radial-gradient(circle,rgba(61,170,134,.055) 0%,transparent 70%);
-  top:-80px;left:-110px;pointer-events:none;
+  content:'';position:absolute;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(61,170,134,.05) 0%,transparent 70%);
+  top:-100px;left:-100px;pointer-events:none;
 }
-.sh{margin-bottom:18px;}
+.sh{margin-bottom:16px;}
 .sh-lbl{
   display:inline-flex;align-items:center;gap:8px;
   color:#52c99f;font-size:.62rem;font-weight:800;
-  letter-spacing:3.5px;text-transform:uppercase;margin-bottom:8px;
+  letter-spacing:3.5px;text-transform:uppercase;margin-bottom:7px;
 }
 .sh-lbl span{display:block;width:26px;height:2px;background:linear-gradient(90deg,#52c99f,transparent);}
-.sh-t{font-family:'Cairo',sans-serif;font-size:1.85rem;font-weight:900;line-height:1.2;}
+.sh-t{font-family:'Cairo',sans-serif;font-size:1.75rem;font-weight:900;line-height:1.2;}
 .sh-t em{
   font-style:normal;
   background:linear-gradient(120deg,#3DAA86,#52c99f,#aaefce);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
-.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.pc{border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.32);border:1px solid rgba(255,255,255,.06);}
-.pch{
-  padding:17px 20px 14px;display:flex;align-items:flex-start;justify-content:space-between;
-  gap:12px;position:relative;overflow:hidden;
+
+/* 4 بطاقات صغيرة */
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;}
+.pc-mini{
+  border-radius:14px;overflow:hidden;cursor:pointer;position:relative;
+  box-shadow:0 4px 20px rgba(0,0,0,.35);border:1.5px solid rgba(255,255,255,.06);
+  transition:transform .2s ease,box-shadow .2s ease;
 }
-.pch::before{content:'';position:absolute;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.06);top:-55px;left:-45px;}
-.pch::after{content:'';position:absolute;width:90px;height:90px;border-radius:50%;background:rgba(255,255,255,.04);bottom:-25px;right:55px;}
-.pch-info{position:relative;z-index:2;}
-.pch-type{font-size:.56rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:4px;}
-.pch-name{font-family:'Cairo',sans-serif;font-size:1.1rem;font-weight:900;color:#fff;line-height:1.2;}
-.pch-en{font-size:.6rem;color:rgba(255,255,255,.5);margin-top:2px;}
-.pch-price{
-  position:relative;z-index:2;direction:ltr;
-  background:rgba(255,255,255,.17);border:1.5px solid rgba(255,255,255,.3);
-  border-radius:11px;padding:9px 14px;text-align:center;flex-shrink:0;min-width:82px;
+.pc-mini:hover{
+  transform:translateY(-4px) scale(1.02);
+  box-shadow:0 10px 36px rgba(0,0,0,.45);
+  border-color:rgba(255,255,255,.2);
 }
-.pp-n{font-family:'Cairo',sans-serif;font-size:1.45rem;font-weight:900;line-height:1;}
-.pp-n.sm{font-size:1.05rem;}
-.pp-c{font-size:.52rem;color:rgba(255,255,255,.65);margin-top:1px;}
-.pp-t{font-size:.45rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.52);margin-top:3px;font-weight:800;}
-.pcb{background:#fff;padding:13px 15px 10px;}
-.pr{display:flex;align-items:flex-start;gap:8px;padding:5px 0;border-bottom:1px solid rgba(0,0,0,.045);}
-.pr:last-child{border-bottom:none;}
-.chk{
-  width:17px;height:17px;border-radius:5px;
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;margin-top:1px;font-size:.56rem;font-weight:900;color:#fff;
+.pc-mini-head{
+  padding:18px 14px 14px;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;
 }
-.pm{font-family:'Cairo',sans-serif;font-size:.8rem;font-weight:800;color:#0D2218;line-height:1.3;}
-.ps{font-size:.62rem;color:rgba(0,0,0,.4);margin-top:1px;line-height:1.3;}
-.pcf{padding:8px 15px 10px;}
-.pcf-t{
-  font-size:.67rem;font-weight:600;text-align:center;
-  padding:6px 8px;border-radius:7px;border:1.5px dashed;line-height:1.5;
+.pc-mini-head::before{content:'';position:absolute;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.07);top:-40px;right:-30px;}
+.pc-mini-head::after{content:'';position:absolute;width:70px;height:70px;border-radius:50%;background:rgba(255,255,255,.04);bottom:-20px;left:-15px;}
+.pc-mini-type{font-size:.52rem;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.6);position:relative;z-index:2;}
+.pc-mini-icon{font-size:1.7rem;line-height:1;position:relative;z-index:2;}
+.pc-mini-name{font-family:'Cairo',sans-serif;font-size:.92rem;font-weight:900;color:#fff;line-height:1.2;position:relative;z-index:2;}
+.pc-mini-price{
+  direction:ltr;position:relative;z-index:2;
+  background:rgba(255,255,255,.18);border:1.5px solid rgba(255,255,255,.3);
+  border-radius:9px;padding:5px 10px;text-align:center;
 }
+.pmp-n{font-family:'Cairo',sans-serif;font-size:1.05rem;font-weight:900;line-height:1;}
+.pmp-n.sm{font-size:.82rem;}
+.pmp-c{font-size:.46rem;color:rgba(255,255,255,.6);}
+.pc-mini-hint{
+  position:relative;z-index:2;
+  font-size:.52rem;color:rgba(255,255,255,.35);
+  display:flex;align-items:center;gap:4px;margin-top:2px;
+}
+.hint-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.25);}
+/* body صغير — 2 مميزات */
+.pc-mini-body{background:#fff;padding:10px 10px 8px;}
+.pmr{display:flex;align-items:flex-start;gap:6px;padding:3.5px 0;border-bottom:1px solid rgba(0,0,0,.04);}
+.pmr:last-child{border-bottom:none;}
+.pmchk{width:14px;height:14px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:.5rem;font-weight:900;color:#fff;}
+.pmtx{font-family:'Cairo',sans-serif;font-size:.68rem;font-weight:800;color:#0D2218;line-height:1.3;}
 
-.strat .pch{background:linear-gradient(135deg,#C4912A,#D4A84B 45%,#E2C068);}
-.strat .chk{background:#C4912A;}
-.strat .pcf{background:#FFFCF2;}
-.strat .pcf-t{color:#8A5C0A;border-color:rgba(200,150,40,.4);background:rgba(212,168,75,.06);}
+/* ثيمات البطاقات */
+.strat .pc-mini-head{background:linear-gradient(135deg,#C4912A,#D4A84B 45%,#E2C068);}
+.strat .pmchk{background:#C4912A;}
+.gold  .pc-mini-head{background:linear-gradient(135deg,#9A7020,#B8913A 50%,#C9A348);}
+.gold  .pmchk{background:#9A7020;}
+.inkd  .pc-mini-head{background:linear-gradient(135deg,#0A6B5C,#0D7D6C 50%,#1A9880);}
+.inkd  .pmchk{background:#0D7D6C;}
+.exhb  .pc-mini-head{background:linear-gradient(135deg,#175E42,#1B6B52 50%,#2A8A68);}
+.exhb  .pmchk{background:#1B6B52;}
 
-.gold .pch{background:linear-gradient(135deg,#9A7020,#B8913A 50%,#C9A348);}
-.gold .chk{background:#9A7020;}
-.gold .pcf{background:#FDFAF0;}
-.gold .pcf-t{color:#7A5810;border-color:rgba(180,140,50,.38);background:rgba(180,140,50,.05);}
-
-.inkd .pch{background:linear-gradient(135deg,#0A6B5C,#0D7D6C 50%,#1A9880);}
-.inkd .chk{background:#0D7D6C;}
-.inkd .pcf{background:#EDFAF7;}
-.inkd .pcf-t{color:#0A5245;border-color:rgba(13,125,108,.3);background:rgba(13,125,108,.05);}
-
-.exhb .pch{background:linear-gradient(135deg,#175E42,#1B6B52 50%,#2A8A68);}
-.exhb .chk{background:#1B6B52;}
-.exhb .pcf{background:#EEF9F5;}
-.exhb .pcf-t{color:#103D2A;border-color:rgba(27,107,82,.28);background:rgba(27,107,82,.05);}
-
-/* ════  WHY  1360–1530  ════ */
+/* ════  WHY  930–1100  ════ */
 .why{
-  position:absolute; top:1360px; left:0; right:0; height:170px;
+  position:absolute; top:930px; left:0; right:0; height:170px;
   background:linear-gradient(135deg,#061409 0%,#0A1C0F 50%,#071209 100%);
   border-top:1px solid rgba(61,170,134,.15);
-  padding:24px 48px 0; overflow:hidden;
+  padding:22px 48px 0; overflow:hidden;
 }
 .why::before{
   content:'';position:absolute;inset:0;
   background:repeating-linear-gradient(90deg,rgba(61,170,134,.015) 0,rgba(61,170,134,.015) 1px,transparent 1px,transparent 90px);
 }
-.wgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px;position:relative;z-index:1;}
-.wc{
-  display:flex;align-items:flex-start;gap:9px;
-  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
-  border-radius:10px;padding:12px 12px 11px;
-}
-.wc-ic{font-size:1.25rem;flex-shrink:0;margin-top:1px;}
-.wc-t{font-family:'Cairo',sans-serif;font-size:.82rem;font-weight:800;color:rgba(255,255,255,.88);line-height:1.4;}
-.wc-s{font-size:.6rem;color:rgba(255,255,255,.32);margin-top:3px;line-height:1.4;}
+.wgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px;position:relative;z-index:1;}
+.wc{display:flex;align-items:flex-start;gap:9px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:11px 11px 10px;}
+.wc-ic{font-size:1.2rem;flex-shrink:0;margin-top:1px;}
+.wc-t{font-family:'Cairo',sans-serif;font-size:.8rem;font-weight:800;color:rgba(255,255,255,.88);line-height:1.4;}
+.wc-s{font-size:.58rem;color:rgba(255,255,255,.32);margin-top:3px;line-height:1.4;}
 
-/* ════  ORGS  1530–1720  ════ */
+/* ════  ORGS  1100–1295  ════ */
 .orgs{
-  position:absolute; top:1530px; left:0; right:0; height:190px;
+  position:absolute; top:1100px; left:0; right:0; height:195px;
   background:linear-gradient(180deg,#060F09 0%,#071612 60%,#060F09 100%);
   border-top:1px solid rgba(61,170,134,.1);
-  padding:22px 48px 0; overflow:hidden;
+  padding:20px 48px 0; overflow:hidden;
 }
-.orgs::before{
-  content:'';position:absolute;inset:0;
-  background:repeating-linear-gradient(90deg,rgba(61,170,134,.016) 0,rgba(61,170,134,.016) 1px,transparent 1px,transparent 82px);
-}
-.org-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px;position:relative;z-index:1;}
+.orgs::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(61,170,134,.016) 0,rgba(61,170,134,.016) 1px,transparent 1px,transparent 82px);}
+.org-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px;position:relative;z-index:1;}
 .oc{display:flex;align-items:center;gap:7px;border-radius:9px;padding:7px 11px;border:1.5px solid;}
 .od{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
-.on{font-family:'Cairo',sans-serif;font-size:.8rem;font-weight:800;}
-.oe{font-size:.55rem;color:rgba(255,255,255,.32);}
+.on{font-family:'Cairo',sans-serif;font-size:.78rem;font-weight:800;}
+.oe{font-size:.53rem;color:rgba(255,255,255,.32);}
 .oc-g{background:rgba(61,170,134,.08);border-color:rgba(61,170,134,.24)}.oc-g .od{background:#3DAA86}.oc-g .on{color:#3DAA86}
 .oc-b{background:rgba(91,141,217,.08);border-color:rgba(91,141,217,.24)}.oc-b .od{background:#5B8DD9}.oc-b .on{color:#5B8DD9}
 .oc-p{background:rgba(168,101,212,.08);border-color:rgba(168,101,212,.24)}.oc-p .od{background:#A865D4}.oc-p .on{color:#A865D4}
 .oc-o{background:rgba(232,136,78,.08);border-color:rgba(232,136,78,.24)}.oc-o .od{background:#E8884E}.oc-o .on{color:#E8884E}
 .oc-y{background:rgba(212,165,0,.1);border-color:rgba(212,165,0,.28)}.oc-y .od{background:#D4A500}.oc-y .on{color:#D4A500}
-.oc-t{background:rgba(61,170,160,.08);border-color:rgba(61,170,160,.24)}.oc-t .od{background:#3DAAA0}.oc-t .on{color:#3DAAA0}
 
-/* ════  CONTACT  1720–1990  ════ */
+/* ════  CONTACT  1295–1660  ════ */
 .cbar{
-  position:absolute; top:1720px; left:0; right:0; height:270px;
+  position:absolute; top:1295px; left:0; right:0; height:365px;
   background:linear-gradient(135deg,#08190E 0%,#0C2214 50%,#0A2C1A 80%,#08190E 100%);
   border-top:1.5px solid rgba(61,170,134,.3);
   overflow:hidden;
 }
-.cbar::before{
-  content:'';position:absolute;width:400px;height:400px;border-radius:50%;
-  background:radial-gradient(circle,rgba(61,170,134,.14) 0%,transparent 60%);
-  top:-180px;right:-60px;
-}
-.cbar::after{
-  content:'';position:absolute;width:250px;height:250px;border-radius:50%;
-  background:radial-gradient(circle,rgba(61,170,134,.07) 0%,transparent 60%);
-  bottom:-100px;left:-60px;
-}
-.cbar-inner{
-  position:relative;z-index:2;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:40px 52px; height:100%;
-}
-.cbar-left{}
+.cbar::before{content:'';position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(61,170,134,.13) 0%,transparent 60%);top:-170px;right:-50px;}
+.cbar::after{content:'';position:absolute;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(61,170,134,.07) 0%,transparent 60%);bottom:-90px;left:-50px;}
+.cbar-inner{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:45px 52px;height:100%;}
 .cbar-pre{font-size:.62rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:10px;}
-.cbar-cta{font-family:'Cairo',sans-serif;font-size:2.1rem;font-weight:900;line-height:1.25;}
-.cbar-cta em{
-  font-style:normal;
-  background:linear-gradient(120deg,#3DAA86,#52c99f,#aaefce);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
-.cbar-cta small{display:block;font-size:1rem;color:rgba(255,255,255,.36);margin-top:8px;font-weight:600;}
+.cbar-cta{font-family:'Cairo',sans-serif;font-size:2rem;font-weight:900;line-height:1.25;}
+.cbar-cta em{font-style:normal;background:linear-gradient(120deg,#3DAA86,#52c99f,#aaefce);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.cbar-cta small{display:block;font-size:.9rem;color:rgba(255,255,255,.34);margin-top:8px;font-weight:600;}
 .cbar-right{display:flex;flex-direction:column;gap:12px;}
-.ci{
-  display:flex;align-items:center;gap:12px;
-  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);
-  border-radius:13px;padding:13px 22px;
-}
-.ci-ic{
-  width:38px;height:38px;border-radius:9px;
-  background:linear-gradient(135deg,#3DAA86,#1B6B52);
-  display:flex;align-items:center;justify-content:center;
-  font-size:.95rem;flex-shrink:0;
-}
-.ci-lbl{font-size:.55rem;color:rgba(255,255,255,.32);letter-spacing:.08em;margin-bottom:3px;}
-.ci-val{font-family:'Cairo',sans-serif;font-size:.97rem;font-weight:700;direction:ltr;}
+.ci{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:13px;padding:14px 22px;}
+.ci-ic{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,#3DAA86,#1B6B52);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;}
+.ci-lbl{font-size:.54rem;color:rgba(255,255,255,.32);letter-spacing:.07em;margin-bottom:3px;}
+.ci-val{font-family:'Cairo',sans-serif;font-size:.95rem;font-weight:700;direction:ltr;}
 
-/* ════  FOOTER  1990–2160  ════ */
+/* ════  FOOTER  1660–1800  ════ */
 .foot{
-  position:absolute; top:1990px; left:0; right:0; height:170px;
+  position:absolute; top:1660px; left:0; right:0; height:140px;
   background:#040C06;
   border-top:1px solid rgba(61,170,134,.1);
 }
-.foot-top{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:26px 52px 0;
-}
-.fl{
-  font-family:'Cairo',sans-serif;font-size:1.1rem;font-weight:900;
-  background:linear-gradient(90deg,#3DAA86,#52c99f);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
-.fdate{
-  display:flex;align-items:center;gap:10px;
-  background:rgba(61,170,134,.07);border:1px solid rgba(61,170,134,.18);
-  border-radius:10px;padding:9px 18px;
-}
+.foot-top{display:flex;align-items:center;justify-content:space-between;padding:22px 52px 0;}
+.fl{font-family:'Cairo',sans-serif;font-size:1rem;font-weight:900;background:linear-gradient(90deg,#3DAA86,#52c99f);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.fdate{display:flex;align-items:center;gap:10px;background:rgba(61,170,134,.07);border:1px solid rgba(61,170,134,.18);border-radius:10px;padding:8px 16px;}
 .fdot{width:8px;height:8px;border-radius:50%;background:#52c99f;box-shadow:0 0 8px #52c99f;animation:blink 2s infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.fdt{font-family:'Cairo',sans-serif;font-size:.82rem;font-weight:800;color:#52c99f;}
-.ft{font-size:.62rem;color:rgba(255,255,255,.18);}
-.foot-bot{
-  display:flex;align-items:center;justify-content:center;
-  padding-top:16px; gap:16px;
-}
+.fdt{font-family:'Cairo',sans-serif;font-size:.8rem;font-weight:800;color:#52c99f;}
+.ft{font-size:.6rem;color:rgba(255,255,255,.18);}
+.foot-bot{display:flex;align-items:center;justify-content:center;padding-top:13px;gap:14px;}
 .foot-sep{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.12);}
+
+/* ══════════════════════════════════════════
+   MODAL — خارج #poster، fixed على الشاشة
+══════════════════════════════════════════ */
+.modal-overlay{
+  display:none;
+  position:fixed; inset:0; z-index:9999;
+  align-items:center; justify-content:center;
+  padding:20px;
+}
+.modal-overlay.open{ display:flex; }
+.modal-backdrop{
+  position:absolute; inset:0;
+  background:rgba(0,0,0,.72);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  animation:fadein .2s ease;
+}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+
+.modal-box{
+  position:relative; z-index:2;
+  width:min(520px,90vw);
+  border-radius:18px; overflow:hidden;
+  box-shadow:0 24px 72px rgba(0,0,0,.65);
+  border:1.5px solid rgba(255,255,255,.1);
+  animation:popin .25s cubic-bezier(.34,1.56,.64,1);
+}
+@keyframes popin{from{opacity:0;transform:scale(.88) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+
+.modal-head{
+  padding:26px 24px 20px;position:relative;overflow:hidden;
+  display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+}
+.modal-head::before{content:'';position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.07);top:-70px;left:-55px;}
+.modal-head::after{content:'';position:absolute;width:110px;height:110px;border-radius:50%;background:rgba(255,255,255,.04);bottom:-30px;right:70px;}
+.mh-info{position:relative;z-index:2;}
+.mh-type{font-size:.58rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:5px;}
+.mh-name{font-family:'Cairo',sans-serif;font-size:1.45rem;font-weight:900;color:#fff;line-height:1.2;}
+.mh-en{font-size:.65rem;color:rgba(255,255,255,.48);margin-top:3px;}
+.mh-price{
+  position:relative;z-index:2;direction:ltr;
+  background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.32);
+  border-radius:12px;padding:10px 16px;text-align:center;flex-shrink:0;min-width:95px;
+}
+.mp-n{font-family:'Cairo',sans-serif;font-size:1.6rem;font-weight:900;line-height:1;}
+.mp-n.sm{font-size:1.15rem;}
+.mp-c{font-size:.54rem;color:rgba(255,255,255,.65);margin-top:2px;}
+.mp-t{font-size:.46rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:4px;font-weight:800;}
+
+.modal-body{background:#fff;padding:18px 20px 14px;}
+.mr{display:flex;align-items:flex-start;gap:10px;padding:7px 0;border-bottom:1px solid rgba(0,0,0,.05);}
+.mr:last-child{border-bottom:none;}
+.mchk{width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:.62rem;font-weight:900;color:#fff;}
+.mm{font-family:'Cairo',sans-serif;font-size:.9rem;font-weight:800;color:#0D2218;line-height:1.35;}
+.ms{font-size:.68rem;color:rgba(0,0,0,.38);margin-top:2px;line-height:1.4;}
+
+.modal-foot{padding:12px 20px 14px;}
+.mf-t{font-size:.72rem;font-weight:600;text-align:center;padding:9px 10px;border-radius:9px;border:1.5px dashed;line-height:1.6;}
+
+.modal-close{
+  position:absolute;top:14px;left:14px;z-index:10;
+  width:34px;height:34px;border-radius:50%;
+  background:rgba(0,0,0,.3);border:1.5px solid rgba(255,255,255,.2);
+  color:#fff;font-size:1.1rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .15s;
+}
+.modal-close:hover{background:rgba(0,0,0,.55);}
+
+/* ثيمات المودال */
+.modal-strat .modal-head{background:linear-gradient(135deg,#C4912A,#D4A84B 45%,#E2C068);}
+.modal-strat .mchk{background:#C4912A;}
+.modal-strat .modal-foot{background:#FFFCF2;}
+.modal-strat .mf-t{color:#8A5C0A;border-color:rgba(200,150,40,.4);background:rgba(212,168,75,.06);}
+
+.modal-gold .modal-head{background:linear-gradient(135deg,#9A7020,#B8913A 50%,#C9A348);}
+.modal-gold .mchk{background:#9A7020;}
+.modal-gold .modal-foot{background:#FDFAF0;}
+.modal-gold .mf-t{color:#7A5810;border-color:rgba(180,140,50,.38);background:rgba(180,140,50,.05);}
+
+.modal-inkd .modal-head{background:linear-gradient(135deg,#0A6B5C,#0D7D6C 50%,#1A9880);}
+.modal-inkd .mchk{background:#0D7D6C;}
+.modal-inkd .modal-foot{background:#EDFAF7;}
+.modal-inkd .mf-t{color:#0A5245;border-color:rgba(13,125,108,.3);background:rgba(13,125,108,.05);}
+
+.modal-exhb .modal-head{background:linear-gradient(135deg,#175E42,#1B6B52 50%,#2A8A68);}
+.modal-exhb .mchk{background:#1B6B52;}
+.modal-exhb .modal-foot{background:#EEF9F5;}
+.modal-exhb .mf-t{color:#103D2A;border-color:rgba(27,107,82,.28);background:rgba(27,107,82,.05);}
 </style>
 </head>
 <body>
 
+<!-- ══════════════════════════════════════
+     POSTER
+══════════════════════════════════════ -->
 <div id="poster">
 
-  <!-- ══ HERO ══ -->
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-img"></div>
@@ -348,89 +382,89 @@ html, body {
     </div>
   </section>
 
-  <!-- ══ STRIP ══ -->
+  <!-- STRIP -->
   <div class="strip">
     <div class="si"><div class="si-orb">📅</div><div><div class="si-lbl">التاريخ</div><div class="si-val">5 – 6 مايو 2026</div></div></div>
     <div class="si"><div class="si-orb">🕐</div><div><div class="si-lbl">الوقت</div><div class="si-val">8:30 ص – 12:00 م</div></div></div>
     <div class="si"><div class="si-orb">📍</div><div><div class="si-lbl">الموقع</div><div class="si-val">بهو جامعة الإمام · الرياض</div></div></div>
   </div>
 
-  <!-- ══ PACKAGES ══ -->
+  <!-- PACKAGES — 4 بطاقات صغيرة -->
   <div class="pkg-sec">
     <div class="sh">
       <div class="sh-lbl"><span></span>باقات الرعاية</div>
-      <div class="sh-t">اختر <em>مستوى مشاركتك</em></div>
+      <div class="sh-t">اختر <em>مستوى مشاركتك</em> — اضغط على الباقة لمعرفة التفاصيل</div>
     </div>
     <div class="pgrid">
 
-      <!-- STRATEGIC -->
-      <div class="pc strat">
-        <div class="pch">
-          <div class="pch-info"><div class="pch-type">Strategic Sponsor</div><div class="pch-name">الراعي الاستراتيجي</div><div class="pch-en">عدد محدود جداً — حصري</div></div>
-          <div class="pch-price"><div class="pp-n">12,000</div><div class="pp-c">ريال سعودي</div><div class="pp-t">EXCLUSIVE</div></div>
+      <!-- بطاقة 1: الاستراتيجي -->
+      <div class="pc-mini strat" onclick="openModal('strat')">
+        <div class="pc-mini-head">
+          <div class="pc-mini-type">Strategic Sponsor</div>
+          <div class="pc-mini-icon">🏆</div>
+          <div class="pc-mini-name">الراعي الاستراتيجي</div>
+          <div class="pc-mini-price"><div class="pmp-n">12,000</div><div class="pmp-c">ريال سعودي</div></div>
+          <div class="pc-mini-hint"><div class="hint-dot"></div>اضغط للتفاصيل</div>
         </div>
-        <div class="pcb">
-          <div class="pr"><div class="chk" style="background:#C4912A">✓</div><div><div class="pm">لقب الراعي الاستراتيجي في كل إعلان</div></div></div>
-          <div class="pr"><div class="chk" style="background:#C4912A">✓</div><div><div class="pm">جناح رئيسي بأفضل موقع قرب المسرح</div></div></div>
-          <div class="pr"><div class="chk" style="background:#C4912A">✓</div><div><div class="pm">كلمة افتتاحية + Branding على المسرح</div></div></div>
-          <div class="pr"><div class="chk" style="background:#C4912A">✓</div><div><div class="pm">رعاية جلسة رئيسية باسمك + Panel</div></div></div>
-          <div class="pr"><div class="chk" style="background:#C4912A">✓</div><div><div class="pm">Roll-up + فيديو مقابلة رسمية</div></div></div>
-          <div class="pr"><div class="chk" style="background:#C4912A">✓</div><div><div class="pm">درع فاخر على المسرح + دعوات VIP</div></div></div>
+        <div class="pc-mini-body">
+          <div class="pmr"><div class="pmchk" style="background:#C4912A">✓</div><div class="pmtx">جناح رئيسي قرب المسرح</div></div>
+          <div class="pmr"><div class="pmchk" style="background:#C4912A">✓</div><div class="pmtx">كلمة افتتاحية + Branding</div></div>
+          <div class="pmr"><div class="pmchk" style="background:#C4912A">✓</div><div class="pmtx">درع فاخر + دعوات VIP</div></div>
         </div>
-        <div class="pcf"><div class="pcf-t">أعلى مستوى تأثير وحضور في أكبر معرض فنتك أكاديمي بالرياض</div></div>
       </div>
 
-      <!-- GOLDEN -->
-      <div class="pc gold">
-        <div class="pch">
-          <div class="pch-info"><div class="pch-type">Gold Sponsor</div><div class="pch-name">الراعي الذهبي</div><div class="pch-en">عدد محدود — Limited</div></div>
-          <div class="pch-price"><div class="pp-n">6,000</div><div class="pp-c">ريال سعودي</div><div class="pp-t">LIMITED</div></div>
+      <!-- بطاقة 2: الذهبي -->
+      <div class="pc-mini gold" onclick="openModal('gold')">
+        <div class="pc-mini-head">
+          <div class="pc-mini-type">Gold Sponsor</div>
+          <div class="pc-mini-icon">⭐</div>
+          <div class="pc-mini-name">الراعي الذهبي</div>
+          <div class="pc-mini-price"><div class="pmp-n">6,000</div><div class="pmp-c">ريال سعودي</div></div>
+          <div class="pc-mini-hint"><div class="hint-dot"></div>اضغط للتفاصيل</div>
         </div>
-        <div class="pcb">
-          <div class="pr"><div class="chk" style="background:#9A7020">✓</div><div><div class="pm">لقب الراعي الذهبي في كل إعلان ومنشور</div></div></div>
-          <div class="pr"><div class="chk" style="background:#9A7020">✓</div><div><div class="pm">جناح بموقع استراتيجي متميز</div></div></div>
-          <div class="pr"><div class="chk" style="background:#9A7020">✓</div><div><div class="pm">المشاركة في الأركان الخمسة + الجلسات</div></div></div>
-          <div class="pr"><div class="chk" style="background:#9A7020">✓</div><div><div class="pm">شعار في جميع المواد التسويقية والكتيّب</div></div></div>
-          <div class="pr"><div class="chk" style="background:#9A7020">✓</div><div><div class="pm">توزيع مواد دعائية في حقائب الحضور</div></div></div>
-          <div class="pr"><div class="chk" style="background:#9A7020">✓</div><div><div class="pm">درع تكريمي + ملخص إحصائي + دعوات VIP</div></div></div>
+        <div class="pc-mini-body">
+          <div class="pmr"><div class="pmchk" style="background:#9A7020">✓</div><div class="pmtx">جناح بموقع استراتيجي</div></div>
+          <div class="pmr"><div class="pmchk" style="background:#9A7020">✓</div><div class="pmtx">شعار على كل المواد</div></div>
+          <div class="pmr"><div class="pmchk" style="background:#9A7020">✓</div><div class="pmtx">درع تكريمي + VIP</div></div>
         </div>
-        <div class="pcf"><div class="pcf-t">حضور إعلامي ثابت وتفاعل مباشر مع أكثر من 3000 طالب</div></div>
       </div>
 
-      <!-- IN-KIND -->
-      <div class="pc inkd">
-        <div class="pch">
-          <div class="pch-info"><div class="pch-type">In-Kind Partners</div><div class="pch-name">شركاء النجاح</div><div class="pch-en">بدون مقابل مالي — عيني</div></div>
-          <div class="pch-price"><div class="pp-n sm">عيني</div><div class="pp-c">بدون رسوم</div><div class="pp-t">OPEN</div></div>
+      <!-- بطاقة 3: شركاء النجاح -->
+      <div class="pc-mini inkd" onclick="openModal('inkd')">
+        <div class="pc-mini-head">
+          <div class="pc-mini-type">In-Kind Partners</div>
+          <div class="pc-mini-icon">🤝</div>
+          <div class="pc-mini-name">شركاء النجاح</div>
+          <div class="pc-mini-price"><div class="pmp-n sm">عيني</div><div class="pmp-c">بدون رسوم</div></div>
+          <div class="pc-mini-hint"><div class="hint-dot"></div>اضغط للتفاصيل</div>
         </div>
-        <div class="pcb">
-          <div class="pr"><div class="chk" style="background:#2D6BE4">✓</div><div><div class="pm" style="color:#1B4FAB">شريك أكاديمي</div><div class="ps">شهادات المشاركين + بوث + ذكر في الافتتاح</div></div></div>
-          <div class="pr"><div class="chk" style="background:#7C3AED">✓</div><div><div class="pm" style="color:#5B22C5">شريك مطبوعات</div><div class="ps">شعار على مطبوعات المعرض + بانر + الدعوات</div></div></div>
-          <div class="pr"><div class="chk" style="background:#D97706">✓</div><div><div class="pm" style="color:#B45309">شريك تكنولوجي</div><div class="ps">منصة أو نظام مقابل ذكر رسمي + شاشات</div></div></div>
-          <div class="pr"><div class="chk" style="background:#059669">✓</div><div><div class="pm" style="color:#047857">شريك النجاح</div><div class="ps">هدايا داخل كيس الهدية + شكر في الختام</div></div></div>
+        <div class="pc-mini-body">
+          <div class="pmr"><div class="pmchk" style="background:#0D7D6C">✓</div><div class="pmtx">شريك أكاديمي أو تقني</div></div>
+          <div class="pmr"><div class="pmchk" style="background:#0D7D6C">✓</div><div class="pmtx">ذكر رسمي + شارة معتمد</div></div>
+          <div class="pmr"><div class="pmchk" style="background:#0D7D6C">✓</div><div class="pmtx">بدون أي مقابل مالي</div></div>
         </div>
-        <div class="pcf"><div class="pcf-t">ذكر رسمي وشارة "شريك معتمد" مقابل دعمك العيني للفعالية</div></div>
       </div>
 
-      <!-- EXHIBITORS -->
-      <div class="pc exhb">
-        <div class="pch">
-          <div class="pch-info"><div class="pch-type">Exhibitors</div><div class="pch-name">المشاركون في المعرض</div><div class="pch-en">بوث مستقل — Independent</div></div>
-          <div class="pch-price"><div class="pp-n sm">بوث</div><div class="pp-c">مستقل</div><div class="pp-t">OPEN</div></div>
+      <!-- بطاقة 4: المشاركون -->
+      <div class="pc-mini exhb" onclick="openModal('exhb')">
+        <div class="pc-mini-head">
+          <div class="pc-mini-type">Exhibitors</div>
+          <div class="pc-mini-icon">🏪</div>
+          <div class="pc-mini-name">المشاركون في المعرض</div>
+          <div class="pc-mini-price"><div class="pmp-n sm">بوث</div><div class="pmp-c">مستقل</div></div>
+          <div class="pc-mini-hint"><div class="hint-dot"></div>اضغط للتفاصيل</div>
         </div>
-        <div class="pcb">
-          <div class="pr"><div class="chk" style="background:#175E42">✓</div><div><div class="pm">البوث الخاص — أحضر هويتك البصرية</div><div class="ps">مساحة + كهرباء + إنترنت + دعم لوجستي</div></div></div>
-          <div class="pr"><div class="chk" style="background:#175E42">✓</div><div><div class="pm">البوث المقدّم — مجهز بالكامل</div><div class="ps">بوث + شاشة 55" + طاولة + كراسي + LED</div></div></div>
-          <div class="pr"><div class="chk" style="background:#175E42">✓</div><div><div class="pm">لوحات وإشارات في خريطة المعرض</div></div></div>
-          <div class="pr"><div class="chk" style="background:#175E42">✓</div><div><div class="pm">ذكر رسمي في جميع المواد الإعلامية</div></div></div>
+        <div class="pc-mini-body">
+          <div class="pmr"><div class="pmchk" style="background:#1B6B52">✓</div><div class="pmtx">بوث خاص أو مجهز</div></div>
+          <div class="pmr"><div class="pmchk" style="background:#1B6B52">✓</div><div class="pmtx">شاشة 55" + دعم لوجستي</div></div>
+          <div class="pmr"><div class="pmchk" style="background:#1B6B52">✓</div><div class="pmtx">ذكر في خريطة المعرض</div></div>
         </div>
-        <div class="pcf"><div class="pcf-t">كلا الخيارين يشملان الحضور الكامل والدعم اللوجستي طوال اليومين</div></div>
       </div>
 
     </div>
   </div>
 
-  <!-- ══ WHY ══ -->
+  <!-- WHY -->
   <div class="why">
     <div class="sh-lbl" style="position:relative;z-index:1"><span></span>لماذا تشارك في روافد فنتك؟</div>
     <div class="wgrid">
@@ -441,7 +475,7 @@ html, body {
     </div>
   </div>
 
-  <!-- ══ ORGS ══ -->
+  <!-- ORGS -->
   <div class="orgs">
     <div class="sh-lbl" style="position:relative;z-index:1"><span></span>أبرز المشاركين المتوقعين</div>
     <div class="org-row">
@@ -457,11 +491,10 @@ html, body {
       <div class="oc oc-o"><div class="od"></div><div><div class="on">تمارا</div><div class="oe">Tabby · BNPL</div></div></div>
       <div class="oc oc-y"><div class="od"></div><div><div class="on">EY</div></div></div>
       <div class="oc oc-o"><div class="od"></div><div><div class="on">PwC</div></div></div>
-      <div class="oc oc-p"><div class="od"></div><div><div class="on">Urpay</div></div></div>
     </div>
   </div>
 
-  <!-- ══ CONTACT ══ -->
+  <!-- CONTACT -->
   <div class="cbar">
     <div class="cbar-inner">
       <div class="cbar-left">
@@ -484,7 +517,7 @@ html, body {
     </div>
   </div>
 
-  <!-- ══ FOOTER ══ -->
+  <!-- FOOTER -->
   <div class="foot">
     <div class="foot-top">
       <div class="ft">جامعة الإمام محمد بن سعود الإسلامية · الرياض</div>
@@ -502,20 +535,148 @@ html, body {
 
 </div><!-- /poster -->
 
+<!-- ══════════════════════════════════════
+     MODALS — خارج #poster
+══════════════════════════════════════ -->
+
+<!-- الاستراتيجي -->
+<div class="modal-overlay" id="modal-strat">
+  <div class="modal-backdrop" onclick="closeModal()"></div>
+  <div class="modal-box modal-strat">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-head">
+      <div class="mh-info">
+        <div class="mh-type">Strategic Sponsor</div>
+        <div class="mh-name">الراعي الاستراتيجي</div>
+        <div class="mh-en">عدد محدود جداً — حصري</div>
+      </div>
+      <div class="mh-price">
+        <div class="mp-n">12,000</div>
+        <div class="mp-c">ريال سعودي</div>
+        <div class="mp-t">EXCLUSIVE</div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="mr"><div class="mchk" style="background:#C4912A">✓</div><div><div class="mm">لقب الراعي الاستراتيجي في كل إعلان ومنشور</div></div></div>
+      <div class="mr"><div class="mchk" style="background:#C4912A">✓</div><div><div class="mm">جناح رئيسي بأفضل موقع قرب المسرح</div></div></div>
+      <div class="mr"><div class="mchk" style="background:#C4912A">✓</div><div><div class="mm">كلمة افتتاحية + Branding على المسرح</div></div></div>
+      <div class="mr"><div class="mchk" style="background:#C4912A">✓</div><div><div class="mm">رعاية جلسة رئيسية باسمك + Panel</div><div class="ms">تسجيل الجلسة + بث مباشر بشعارك</div></div></div>
+      <div class="mr"><div class="mchk" style="background:#C4912A">✓</div><div><div class="mm">Roll-up + فيديو مقابلة رسمية</div><div class="ms">تقرير إحصائي تفصيلي بعد المعرض</div></div></div>
+      <div class="mr"><div class="mchk" style="background:#C4912A">✓</div><div><div class="mm">درع فاخر على المسرح + دعوات VIP</div><div class="ms">حضور احتفالي في حفل الختام</div></div></div>
+    </div>
+    <div class="modal-foot"><div class="mf-t">أعلى مستوى تأثير وحضور في أكبر معرض فنتك أكاديمي بالرياض</div></div>
+  </div>
+</div>
+
+<!-- الذهبي -->
+<div class="modal-overlay" id="modal-gold">
+  <div class="modal-backdrop" onclick="closeModal()"></div>
+  <div class="modal-box modal-gold">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-head">
+      <div class="mh-info">
+        <div class="mh-type">Gold Sponsor</div>
+        <div class="mh-name">الراعي الذهبي</div>
+        <div class="mh-en">عدد محدود — Limited</div>
+      </div>
+      <div class="mh-price">
+        <div class="mp-n">6,000</div>
+        <div class="mp-c">ريال سعودي</div>
+        <div class="mp-t">LIMITED</div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="mr"><div class="mchk" style="background:#9A7020">✓</div><div><div class="mm">لقب الراعي الذهبي في كل إعلان ومنشور</div></div></div>
+      <div class="mr"><div class="mchk" style="background:#9A7020">✓</div><div><div class="mm">جناح بموقع استراتيجي متميز</div></div></div>
+      <div class="mr"><div class="mchk" style="background:#9A7020">✓</div><div><div class="mm">المشاركة في الأركان الخمسة + الجلسات</div></div></div>
+      <div class="mr"><div class="mchk" style="background:#9A7020">✓</div><div><div class="mm">شعار في جميع المواد التسويقية والكتيّب</div></div></div>
+      <div class="mr"><div class="mchk" style="background:#9A7020">✓</div><div><div class="mm">توزيع مواد دعائية في حقائب الحضور</div><div class="ms">توزيع على جميع الحضور خلال اليومين</div></div></div>
+      <div class="mr"><div class="mchk" style="background:#9A7020">✓</div><div><div class="mm">درع تكريمي + ملخص إحصائي + دعوات VIP</div></div></div>
+    </div>
+    <div class="modal-foot"><div class="mf-t">حضور إعلامي ثابت وتفاعل مباشر مع أكثر من 3000 طالب وطالبة</div></div>
+  </div>
+</div>
+
+<!-- شركاء النجاح -->
+<div class="modal-overlay" id="modal-inkd">
+  <div class="modal-backdrop" onclick="closeModal()"></div>
+  <div class="modal-box modal-inkd">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-head">
+      <div class="mh-info">
+        <div class="mh-type">In-Kind Partners</div>
+        <div class="mh-name">شركاء النجاح</div>
+        <div class="mh-en">بدون مقابل مالي — دعم عيني</div>
+      </div>
+      <div class="mh-price">
+        <div class="mp-n sm">عيني</div>
+        <div class="mp-c">بدون رسوم</div>
+        <div class="mp-t">OPEN</div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="mr"><div class="mchk" style="background:#2D6BE4">✓</div><div><div class="mm" style="color:#1B4FAB">شريك أكاديمي</div><div class="ms">شهادات المشاركين + بوث + ذكر في الافتتاح</div></div></div>
+      <div class="mr"><div class="mchk" style="background:#7C3AED">✓</div><div><div class="mm" style="color:#5B22C5">شريك مطبوعات</div><div class="ms">شعار على مطبوعات المعرض + بانر + الدعوات</div></div></div>
+      <div class="mr"><div class="mchk" style="background:#D97706">✓</div><div><div class="mm" style="color:#B45309">شريك تكنولوجي</div><div class="ms">منصة أو نظام مقابل ذكر رسمي + شاشات</div></div></div>
+      <div class="mr"><div class="mchk" style="background:#059669">✓</div><div><div class="mm" style="color:#047857">شريك النجاح</div><div class="ms">هدايا داخل كيس الهدية + شكر رسمي في الختام</div></div></div>
+    </div>
+    <div class="modal-foot"><div class="mf-t">ذكر رسمي وشارة "شريك معتمد" مقابل دعمك العيني للفعالية — بدون أي رسوم</div></div>
+  </div>
+</div>
+
+<!-- المشاركون -->
+<div class="modal-overlay" id="modal-exhb">
+  <div class="modal-backdrop" onclick="closeModal()"></div>
+  <div class="modal-box modal-exhb">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-head">
+      <div class="mh-info">
+        <div class="mh-type">Exhibitors</div>
+        <div class="mh-name">المشاركون في المعرض</div>
+        <div class="mh-en">بوث مستقل — Independent</div>
+      </div>
+      <div class="mh-price">
+        <div class="mp-n sm">بوث</div>
+        <div class="mp-c">مستقل</div>
+        <div class="mp-t">OPEN</div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="mr"><div class="mchk" style="background:#175E42">✓</div><div><div class="mm">البوث الخاص — أحضر هويتك البصرية</div><div class="ms">مساحة + كهرباء + إنترنت + دعم لوجستي كامل</div></div></div>
+      <div class="mr"><div class="mchk" style="background:#175E42">✓</div><div><div class="mm">البوث المقدّم — مجهز بالكامل</div><div class="ms">بوث احترافي + شاشة 55" + طاولة + كراسي + LED</div></div></div>
+      <div class="mr"><div class="mchk" style="background:#175E42">✓</div><div><div class="mm">لوحات وإشارات في خريطة المعرض</div></div></div>
+      <div class="mr"><div class="mchk" style="background:#175E42">✓</div><div><div class="mm">ذكر رسمي في جميع المواد الإعلامية</div><div class="ms">سوشيال ميديا + كتيّب المعرض + الشاشات</div></div></div>
+    </div>
+    <div class="modal-foot"><div class="mf-t">كلا الخيارين يشملان الحضور الكامل والدعم اللوجستي طوال اليومين</div></div>
+  </div>
+</div>
+
 <script>
+// ── Auto-scale ─────────────────────────────────────
 function scale() {
   const poster = document.getElementById('poster');
   const vw = window.innerWidth;
   const vh = window.innerHeight;
-  const PW = 1080, PH = 2160;
+  const PW = 1080, PH = 1800;
   const s = Math.min(vw / PW, vh / PH, 1);
   poster.style.transform = `scale(${s})`;
   const scaledH = PH * s;
-  document.body.style.paddingTop = Math.max(0, (vh - scaledH) / 2) + 'px';
+  document.body.style.paddingTop  = Math.max(0, (vh - scaledH) / 2) + 'px';
   document.body.style.paddingBottom = '20px';
 }
 scale();
 window.addEventListener('resize', scale);
+
+// ── Modal ────────────────────────────────────────────
+function openModal(id) {
+  document.getElementById('modal-' + id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('open'));
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 </script>
 </body>
 </html>
