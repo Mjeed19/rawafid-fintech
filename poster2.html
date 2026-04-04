@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<title>بوستر الرعاية</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0B1F13;--bg2:#0e2417;--green3:#0d2818;--green4:#050E08;
+  --green:#1B6B52;--glt:#3DAA86;--gm:#1B6B52;
+  --gold:#D4A84B;--teal:#0D7D6C;
+  --ink:#0D2218;--surf:rgba(255,255,255,.06);
+  --b1:rgba(255,255,255,.09);--b2:rgba(61,170,134,.25);
+  --muted:rgba(0,0,0,.45);
+}
+html,body{background:#050E08;font-family:'Tajawal',sans-serif;color:#fff;width:1080px;margin:0 auto}
+.wrap{max-width:1020px;margin:0 auto;padding:0 40px}
+
+/* ══ HERO ══ */
+.hero{
+  position:relative;
+  min-height:680px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:90px 40px 70px;
+  text-align:center;
+  overflow:hidden;
+}
+.h-bg{
+  position:absolute;inset:0;z-index:0;
+  background:url('/poster_bg.webp') center/cover no-repeat;
+  opacity:.18;
+}
+.h-overlay{
+  position:absolute;inset:0;z-index:1;
+  background:
+    radial-gradient(ellipse 80% 70% at 50% 40%,rgba(27,107,82,.18) 0%,transparent 65%),
+    linear-gradient(180deg,rgba(5,14,8,.72) 0%,rgba(5,14,8,.28) 45%,rgba(5,14,8,.55) 80%,#050E08 100%);
+}
+.h-mesh{
+  position:absolute;inset:0;z-index:1;
+  background:
+    repeating-linear-gradient(0deg,rgba(61,170,134,.025) 0px,rgba(61,170,134,.025) 1px,transparent 1px,transparent 44px),
+    repeating-linear-gradient(90deg,rgba(61,170,134,.025) 0px,rgba(61,170,134,.025) 1px,transparent 1px,transparent 44px);
+}
+.h-content{position:relative;z-index:2;max-width:820px;margin:0 auto}
+.h-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(61,170,134,.1);border:1px solid rgba(61,170,134,.22);
+  border-radius:100px;padding:6px 18px;
+  font-size:.72rem;font-weight:700;letter-spacing:2px;color:var(--glt);
+  text-transform:uppercase;margin-bottom:26px;
+}
+.h-title{
+  font-family:'Cairo',sans-serif;
+  font-size:clamp(3rem,7vw,5.2rem);
+  font-weight:900;line-height:1.05;
+  letter-spacing:-.02em;color:#fff;
+  margin-bottom:20px;
+}
+.h-title .grad{
+  background:linear-gradient(135deg,#3DAA86 0%,#52c99f 40%,#7de8c5 70%,#3DAA86 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.h-sub{font-size:1rem;color:rgba(255,255,255,.55);line-height:1.85;margin-bottom:10px}
+.h-sub strong{color:rgba(255,255,255,.85)}
+.h-nums{
+  display:flex;gap:14px;justify-content:center;margin-top:32px;flex-wrap:wrap;
+}
+.hn{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+  border-radius:12px;padding:16px 28px;text-align:center;min-width:140px;
+}
+.hn-n{font-family:'Cairo',sans-serif;font-size:2rem;font-weight:900;color:#fff;line-height:1}
+.hn-l{font-size:.65rem;color:rgba(255,255,255,.45);margin-top:5px;letter-spacing:.05em}
+
+/* ══ EVENT INFO ══ */
+.info-strip{
+  background:#0D2818;
+  border-top:1px solid rgba(61,170,134,.15);
+  border-bottom:1px solid rgba(61,170,134,.15);
+  padding:18px 0;
+}
+.info-inner{
+  display:flex;align-items:center;justify-content:center;gap:0;
+  max-width:1020px;margin:0 auto;padding:0 40px;
+}
+.info-item{
+  display:flex;align-items:center;gap:12px;
+  padding:0 28px;
+  border-left:1px solid rgba(255,255,255,.1);
+  flex:1;
+}
+.info-item:last-child{border-left:none}
+.info-ico{font-size:1.3rem;flex-shrink:0}
+.info-lbl{font-size:.62rem;color:rgba(255,255,255,.35);letter-spacing:.08em;margin-bottom:3px}
+.info-val{font-family:'Cairo',sans-serif;font-size:.95rem;font-weight:800;color:#fff}
+
+/* ══ SECTION ══ */
+.sec{padding:62px 0;width:100%}
+.sec-dark{background:var(--green3)}
+.sec-darker{background:var(--green4)}
+.sec-light{background:#f5faf7}
+.lbl{display:inline-flex;align-items:center;gap:7px;color:var(--glt);font-size:.67rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px}
+.lbl::before{content:'';width:12px;height:2px;background:var(--glt)}
+.lbl.lt{color:rgba(255,255,255,.4)}.lbl.lt::before{background:rgba(255,255,255,.25)}
+.h2{font-family:'Cairo',sans-serif;font-size:clamp(1.6rem,2.4vw,2.2rem);font-weight:900;line-height:1.15;color:var(--ink)}
+.h2.wt{color:#fff}.h2.wt em{color:var(--glt)}
+.h2 em{color:var(--green);font-style:normal}
+.sec-sub{color:rgba(255,255,255,.4);font-size:.84rem;margin-top:7px}
+
+/* ══ PACKAGES ══ */
+.pkgs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
+.pkg2{border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.18)}
+.pkg2-header{padding:22px 26px 20px;position:relative}
+.pkg2-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.pkg2-name{font-family:'Cairo',sans-serif;font-size:1.25rem;font-weight:900;color:#fff;line-height:1.15}
+.pkg2-sub{font-size:.7rem;font-weight:600;color:rgba(255,255,255,.75);margin-top:3px}
+.pkg2-price-box{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:10px 16px;text-align:center;flex-shrink:0;min-width:105px;direction:ltr}
+.pkg2-price-num{font-family:'Cairo',sans-serif;font-size:1.75rem;font-weight:900;color:#fff;line-height:1}
+.pkg2-price-cur{font-size:.62rem;color:rgba(255,255,255,.75);margin-top:2px}
+.pkg2-price-tag{font-size:.56rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:3px}
+.pkg2-body{background:#fff;padding:18px 22px}
+.pkg2-section-title{font-family:'Cairo',sans-serif;font-size:.85rem;font-weight:800;color:var(--ink);margin-bottom:2px}
+.pkg2-section-sub{font-size:.7rem;color:var(--muted);margin-bottom:12px;line-height:1.45}
+.pkg2-divider{height:1.5px;margin-bottom:14px;border-radius:2px}
+.pkg2-list{display:flex;flex-direction:column;gap:0}
+.pkg2-item{display:flex;align-items:flex-start;gap:9px;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.055)}
+.pkg2-item:last-child{border-bottom:none}
+.pkg2-check{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:.6rem;font-weight:900;color:#fff}
+.pkg2-item-main{font-size:.82rem;font-weight:700;color:var(--ink);font-family:'Cairo',sans-serif;line-height:1.3}
+.pkg2-item-desc{font-size:.68rem;color:var(--muted);line-height:1.4;margin-top:1px}
+.pkg2-footer{padding:10px 22px 14px}
+.pkg2-tagline{font-size:.76rem;font-weight:600;text-align:center;padding:9px 12px;border-radius:8px;border:1.5px dashed;line-height:1.5}
+/* package colors */
+.pkg2.strat .pkg2-header{background:linear-gradient(135deg,#B8913A,#D4A84B)}
+.pkg2.strat .pkg2-check{background:var(--gold)}.pkg2.strat .pkg2-divider{background:linear-gradient(90deg,var(--gold),transparent)}
+.pkg2.strat .pkg2-footer{background:#FFFBF0}.pkg2.strat .pkg2-tagline{color:#7A5510;border-color:rgba(212,168,75,.5);background:rgba(212,168,75,.07)}
+.pkg2.gold2 .pkg2-header{background:linear-gradient(135deg,#A07828,#C49838)}
+.pkg2.gold2 .pkg2-check{background:#B8913A}.pkg2.gold2 .pkg2-divider{background:linear-gradient(90deg,#B8913A,transparent)}
+.pkg2.gold2 .pkg2-footer{background:#FDFAF3}.pkg2.gold2 .pkg2-tagline{color:#7A5510;border-color:rgba(184,145,58,.45);background:rgba(184,145,58,.06)}
+.pkg2.inkind .pkg2-header{background:linear-gradient(135deg,#0D7D6C,#1A9E8A)}
+.pkg2.inkind .pkg2-check{background:var(--teal)}.pkg2.inkind .pkg2-divider{background:linear-gradient(90deg,var(--teal),transparent)}
+.pkg2.inkind .pkg2-footer{background:#EDFAF6}.pkg2.inkind .pkg2-tagline{color:#0A5C4F;border-color:rgba(13,125,108,.35);background:rgba(13,125,108,.05)}
+.pkg2.plat .pkg2-header{background:linear-gradient(135deg,#1B6B52,#2A8A6A)}
+.pkg2.plat .pkg2-check{background:var(--green)}.pkg2.plat .pkg2-divider{background:linear-gradient(90deg,var(--green),transparent)}
+.pkg2.plat .pkg2-footer{background:#EDFAF5}.pkg2.plat .pkg2-tagline{color:#0D3328;border-color:rgba(27,107,82,.35);background:rgba(27,107,82,.05)}
+
+/* ══ ORGS ══ */
+.org-tier{margin-top:24px}
+.org-tier-lbl{font-size:.68rem;font-weight:700;letter-spacing:.5px;color:rgba(255,255,255,.35);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.org-tier-lbl::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.07)}
+.org-row{display:flex;flex-wrap:wrap;gap:7px}
+.org-chip{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:10px;padding:9px 14px}
+.org-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.org-ar{font-family:'Cairo',sans-serif;font-size:.85rem;font-weight:800;line-height:1.2}
+.org-en{font-size:.6rem;font-weight:500;color:rgba(255,255,255,.4);line-height:1}
+
+/* ══ CONTACT BAR ══ */
+.cbar{
+  background:linear-gradient(135deg,#0d2818,#0B1F13);
+  border-top:1px solid rgba(61,170,134,.2);
+  padding:36px 0 32px;
+}
+.cbar-inner{
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  max-width:1020px;margin:0 auto;padding:0 40px;
+}
+.cbar-cta{font-family:'Cairo',sans-serif;font-size:1.5rem;font-weight:900;color:#fff}
+.cbar-cta em{color:var(--glt);font-style:normal}
+.cbar-items{display:flex;flex-direction:column;gap:10px}
+.cbar-item{
+  display:flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+  border-radius:10px;padding:10px 18px;
+}
+.cbar-ic{font-size:1rem;flex-shrink:0}
+.cbar-val{font-family:'Cairo',sans-serif;font-size:.9rem;font-weight:700;color:#fff;direction:ltr}
+
+/* ══ FOOTER ══ */
+.footer{
+  background:#050E08;border-top:1px solid rgba(61,170,134,.07);
+  padding:16px 40px;text-align:center;
+  font-size:.68rem;color:rgba(255,255,255,.2);letter-spacing:.04em;
+}
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="h-bg"></div>
+  <div class="h-mesh"></div>
+  <div class="h-overlay"></div>
+  <div class="h-content">
+    <div class="h-pill">فرصة رعاية · 2026</div>
+    <h1 class="h-title">
+      معرض<br>
+      <span class="grad">روافد فنتك 2026</span>
+    </h1>
+    <p class="h-sub">
+      <strong>برعاية جامعة الإمام محمد بن سعود الإسلامية</strong><br>
+      بإشراف كلية علوم الحاسب وكلية الاعمال · الرياض
+    </p>
+    <div class="h-nums">
+      <div class="hn"><div class="hn-n">+3000</div><div class="hn-l">طالب وطالبة</div></div>
+      <div class="hn"><div class="hn-n">يومان</div><div class="hn-l">تواجد كامل</div></div>
+      <div class="hn"><div class="hn-n">20+</div><div class="hn-l">جهة مشاركة</div></div>
+      <div class="hn"><div class="hn-n">5-6</div><div class="hn-l">مايو 2026</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INFO STRIP ══ -->
+<div class="info-strip">
+  <div class="info-inner">
+    <div class="info-item">
+      <div class="info-ico">📅</div>
+      <div><div class="info-lbl">التاريخ</div><div class="info-val">5 – 6 مايو 2026</div></div>
+    </div>
+    <div class="info-item">
+      <div class="info-ico">🕐</div>
+      <div><div class="info-lbl">الوقت</div><div class="info-val">8:30 ص – 12:00 م</div></div>
+    </div>
+    <div class="info-item">
+      <div class="info-ico">📍</div>
+      <div><div class="info-lbl">الموقع</div><div class="info-val">بهو جامعة الإمام · الرياض</div></div>
+    </div>
+    <div class="info-item">
+      <div class="info-ico">🎓</div>
+      <div><div class="info-lbl">الجمهور</div><div class="info-val">طلاب الجامعات الرياض</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PACKAGES ══ -->
+<section class="sec sec-darker">
+  <div class="wrap">
+    <div class="lbl lt">باقات الرعاية</div>
+    <h2 class="h2 wt">اختر <em>مستوى مشاركتك</em></h2>
+    <div class="pkgs">
+
+      <!-- STRATEGIC -->
+      <div class="pkg2 strat">
+        <div class="pkg2-header">
+          <div class="pkg2-top">
+            <div>
+              <div class="pkg2-name">الراعي الاستراتيجي</div>
+              <div class="pkg2-sub">Strategic Sponsor &nbsp;|&nbsp; عدد محدود</div>
+            </div>
+            <div class="pkg2-price-box">
+              <div class="pkg2-price-num">12,000</div>
+              <div class="pkg2-price-cur">ريال سعودي</div>
+              <div class="pkg2-price-tag">EXCLUSIVE</div>
+            </div>
+          </div>
+        </div>
+        <div class="pkg2-body">
+          <div class="pkg2-section-title">المميزات الحصرية</div>
+          <div class="pkg2-section-sub">أعلى مستوى ظهور وتأثير في المعرض</div>
+          <div class="pkg2-divider"></div>
+          <div class="pkg2-list">
+            <div class="pkg2-item"><div class="pkg2-check">✓</div><div><div class="pkg2-item-main">لقب الراعي الاستراتيجي الرسمي في كل إعلان</div></div></div>
+            <div class="pkg2-item"><div class="pkg2-check">✓</div><div><div class="pkg2-item-main">جناح رئيسي بأفضل موقع قرب المسرح</div></div></div>
+            <div class="pkg2-item"><div class="pkg2-check">✓</div><div><div class="pkg2-item-main">كلمة رئيسية في حفل الافتتاح + Branding على المسرح</div></div></div>
+            <div class="pkg2-item"><div class="pkg2-check">✓</div><div><div class="pkg2-item-main">رعاية جلسة رئيسية باسمك + متحدث في Panel</div></div></div>
+            <div class="pkg2-item"><div class="pkg2-check">✓</div><div><div class="pkg2-item-main">Roll-up عند المدخل + فيديو مقابلة رسمية</div></div></div>
+            <div class="pkg2-item"><div class="pkg2-check">✓</div><div><div class="pkg2-item-main">درع فاخر على المسرح + تقرير إحصائي تفصيلي</div></div></div>
+          </div>
+        </div>
+        <div class="pkg2-footer">
+          <div class="pkg2-tagline">فرصة حصرية للتأثير والحضور القوي في أكبر معرض فنتك أكاديمي بالرياض</div>
+        </div>
+      </div>
+
+      <!-- GOLDEN -->
+      <div class="pkg2 gold2">
+        <div class="pkg2-header">
+          <div class="pkg2-top">
+            <div>
+              <div class="pkg2-name">الراعي الذهبي</div>
+              <div class="pkg2-sub">Gold Sponsor &nbsp;|&nbsp; عدد محدود</div>
+            </div>
+            <div class="pkg2-price-box">
+              <div class="pkg2-price-num">6,000</div>
+              <div class="pkg2-price-cur">ريال سعودي</div>
+              <div class="pkg2-price-tag">LIMITED</div>
+            </div>
+          </div>
+        </div>
+        <div class="pkg2-body">
+          <div class="pkg2-section-title">المميزات</div>
+          <div class="pkg2-section-sub">حضور إعلامي ثابت + تفاعل مباشر</div>
+          <div class="pkg2-divider"></div>
+          <div class="pkg2-list">
+            <div class="pkg2-item"><div class="pkg2-check">✓</div><div><div class="pkg2-item-main">لقب الراعي الذهبي الرسمي في كل إعلان</div></div></div>
+            <div class="pkg2-item"><div class="pkg2-check">✓</div><div><div class="pkg2-item-main">جناح بموقع استراتيجي متميز</div></div></div>
+            <div class="pkg2-item"><div class="pkg2-check">✓</div><div><div class="pkg2-item-main">المشاركة في الأركان الخمسة + الجلسات الحوارية</div></div></div>
+            <div class="pkg2-item"><div class="pkg2-check">✓</div><div><div class="pkg2-item-main">شعار في جميع المواد التسويقية + الكتيب الرسمي</div></div></div>
+            <div class="pkg2-item"><div class="pkg2-check">✓</div><div><div class="pkg2-item-main">توزيع مواد دعائية في حقائب الحضور</div></div></div>
+            <div class="pkg2-item"><div class="pkg2-check">✓</div><div><div class="pkg2-item-main">درع تكريمي + ملخص إحصائي + دعوات VIP</div></div></div>
+          </div>
+        </div>
+        <div class="pkg2-footer">
+          <div class="pkg2-tagline">حضور إعلامي ثابت + تفاعل مباشر مع أكثر من 3000 طالب</div>
+        </div>
+      </div>
+
+      <!-- IN-KIND -->
+      <div class="pkg2 inkind">
+        <div class="pkg2-header">
+          <div class="pkg2-top">
+            <div>
+              <div class="pkg2-name">شركاء النجاح</div>
+              <div class="pkg2-sub">In-Kind Partners &nbsp;|&nbsp; بدون مقابل مالي</div>
+            </div>
+            <div class="pkg2-price-box" style="background:rgba(255,255,255,.15)">
+              <div class="pkg2-price-num" style="font-size:1.2rem">عيني</div>
+              <div class="pkg2-price-cur">بدون مقابل مالي</div>
+              <div class="pkg2-price-tag">6 أنواع</div>
+            </div>
+          </div>
+        </div>
+        <div class="pkg2-body">
+          <div class="pkg2-section-title">المميزات</div>
+          <div class="pkg2-section-sub">حضور إعلامي موثّق مقابل دعم عيني متخصص</div>
+          <div class="pkg2-divider"></div>
+          <div class="pkg2-list">
+            <div class="pkg2-item"><div class="pkg2-check" style="background:#2D6BE4">✓</div><div><div class="pkg2-item-main" style="color:#1B4FAB">شريك أكاديمي</div><div class="pkg2-item-desc">شعار على شهادات المشاركين + بوث + ذكر في الافتتاح</div></div></div>
+            <div class="pkg2-item"><div class="pkg2-check" style="background:#7C3AED">✓</div><div><div class="pkg2-item-main" style="color:#5B22C5">شريك مطبوعات</div><div class="pkg2-item-desc">شعار على جميع مطبوعات المعرض + بانر + إدراج في الدعوات</div></div></div>
+            <div class="pkg2-item"><div class="pkg2-check" style="background:#D97706">✓</div><div><div class="pkg2-item-main" style="color:#B45309">شريك تكنولوجي</div><div class="pkg2-item-desc">منصة أو نظام مقابل ذكر رسمي + شعار على الشاشات</div></div></div>
+            <div class="pkg2-item"><div class="pkg2-check" style="background:#059669">✓</div><div><div class="pkg2-item-main" style="color:#047857">شريك النجاح</div><div class="pkg2-item-desc">شعار داخل كيس الهدية + ذكر شكر في كلمة الختام</div></div></div>
+          </div>
+        </div>
+        <div class="pkg2-footer">
+          <div class="pkg2-tagline">ذكر رسمي وشارة "شريك معتمد" مقابل دعمك العيني للفعالية</div>
+        </div>
+      </div>
+
+      <!-- EXHIBITORS -->
+      <div class="pkg2 plat">
+        <div class="pkg2-header">
+          <div class="pkg2-top">
+            <div>
+              <div class="pkg2-name">المشاركون في المعرض</div>
+              <div class="pkg2-sub">Exhibitors &nbsp;|&nbsp; بوث مستقل</div>
+            </div>
+            <div class="pkg2-price-box">
+              <div class="pkg2-price-num" style="font-size:1.2rem">تسجيل</div>
+              <div class="pkg2-price-cur">عبر واتساب</div>
+              <div class="pkg2-price-tag">OPEN</div>
+            </div>
+          </div>
+        </div>
+        <div class="pkg2-body">
+          <div class="pkg2-section-title">خيارات البوث</div>
+          <div class="pkg2-section-sub">احضر هويتك البصرية أو استلم بوثاً مجهزاً بالكامل</div>
+          <div class="pkg2-divider"></div>
+          <div class="pkg2-list">
+            <div class="pkg2-item"><div class="pkg2-check">✓</div><div><div class="pkg2-item-main">البوث الخاص — أحضر هويتك البصرية</div><div class="pkg2-item-desc">مساحة + كهرباء + إنترنت + دعم لوجستي</div></div></div>
+            <div class="pkg2-item"><div class="pkg2-check">✓</div><div><div class="pkg2-item-main">البوث المقدّم — مجهز بالكامل</div><div class="pkg2-item-desc">بوث احترافي + شاشة 55" + طاولة + كراسي + LED</div></div></div>
+            <div class="pkg2-item"><div class="pkg2-check">✓</div><div><div class="pkg2-item-main">لوحات وإشارات في خريطة المعرض</div></div></div>
+            <div class="pkg2-item"><div class="pkg2-check">✓</div><div><div class="pkg2-item-main">ذكر رسمي في جميع المواد الإعلامية</div></div></div>
+            <div class="pkg2-item"><div class="pkg2-check">✓</div><div><div class="pkg2-item-main">فريق دعم متواصل خلال اليومين</div></div></div>
+          </div>
+        </div>
+        <div class="pkg2-footer">
+          <div class="pkg2-tagline">كلا الخيارين يشملان الحضور الكامل والدعم اللوجستي طوال يومي المعرض</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ ORGS ══ -->
+<section class="sec sec-dark">
+  <div class="wrap">
+    <div class="lbl lt">أبرز المشاركين المتوقعين</div>
+    <h2 class="h2 wt">ستكون جانب <em>هؤلاء</em></h2>
+    <div class="org-tier">
+      <div class="org-tier-lbl">جهات حكومية وتنظيمية</div>
+      <div class="org-row">
+        <div class="org-chip"><div class="org-dot" style="background:#00703c"></div><div><div class="org-ar" style="color:#3DAA86">البنك المركزي السعودي</div><div class="org-en">SAMA</div></div></div>
+        <div class="org-chip"><div class="org-dot" style="background:#1B4F9A"></div><div><div class="org-ar" style="color:#5B8DD9">SDAIA</div><div class="org-en">هيئة البيانات والذكاء الاصطناعي</div></div></div>
+        <div class="org-chip"><div class="org-dot" style="background:#006837"></div><div><div class="org-ar" style="color:#3DAA86">وزارة الاستثمار</div><div class="org-en">Ministry of Investment</div></div></div>
+        <div class="org-chip"><div class="org-dot" style="background:#007A53"></div><div><div class="org-ar" style="color:#3DAA86">فنتك السعودية</div><div class="org-en">Fintech Saudi</div></div></div>
+        <div class="org-chip"><div class="org-dot" style="background:#1E3A5F"></div><div><div class="org-ar" style="color:#7aaedd">الأكاديمية المالية</div><div class="org-en">Financial Academy</div></div></div>
+      </div>
+    </div>
+    <div class="org-tier">
+      <div class="org-tier-lbl">مصارف وشركات مالية</div>
+      <div class="org-row">
+        <div class="org-chip"><div class="org-dot" style="background:#6A1F7A"></div><div><div class="org-ar" style="color:#b87dd4">STC Bank</div><div class="org-en">مصرفي رقمي</div></div></div>
+        <div class="org-chip"><div class="org-dot" style="background:#004B8D"></div><div><div class="org-ar" style="color:#6ea8de">بنك الإنماء</div><div class="org-en">Alinma Bank</div></div></div>
+        <div class="org-chip"><div class="org-dot" style="background:#003087"></div><div><div class="org-ar" style="color:#6ea8de">بنك الرياض</div><div class="org-en">Riyad Bank</div></div></div>
+        <div class="org-chip"><div class="org-dot" style="background:#00843D"></div><div><div class="org-ar" style="color:#3DAA86">SIDF</div><div class="org-en">صندوق التنمية الصناعية</div></div></div>
+      </div>
+    </div>
+    <div class="org-tier">
+      <div class="org-tier-lbl">شركات فنتك واستشارات</div>
+      <div class="org-row">
+        <div class="org-chip"><div class="org-dot" style="background:#D4521A"></div><div><div class="org-ar" style="color:#e8884e">تمارا</div><div class="org-en">Tamara · BNPL</div></div></div>
+        <div class="org-chip"><div class="org-dot" style="background:#0F9B8E"></div><div><div class="org-ar" style="color:#3daaa0">Tabby</div><div class="org-en">BNPL</div></div></div>
+        <div class="org-chip" style="background:#2E2E38;border-color:#444"><div class="org-dot" style="background:#FFE600"></div><div><div class="org-ar" style="color:#FFE600">EY</div><div class="org-en" style="color:rgba(255,255,255,.4)">Ernst &amp; Young</div></div></div>
+        <div class="org-chip"><div class="org-dot" style="background:#E0301E"></div><div><div class="org-ar" style="color:#e87870">PwC</div><div class="org-en">PricewaterhouseCoopers</div></div></div>
+        <div class="org-chip"><div class="org-dot" style="background:#6B3FA0"></div><div><div class="org-ar" style="color:#a87fd4">Urpay</div><div class="org-en">محفظة رقمية</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT BAR ══ -->
+<div class="cbar">
+  <div class="cbar-inner">
+    <div class="cbar-cta">تواصل معنا و<em>انضم الآن</em></div>
+    <div class="cbar-items">
+      <div class="cbar-item">
+        <div class="cbar-ic">📧</div>
+        <div class="cbar-val">pr.technationclub@gmail.com</div>
+      </div>
+      <div class="cbar-item">
+        <div class="cbar-ic">📱</div>
+        <div class="cbar-val">+966 53 483 1944</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<div class="footer">
+  معرض روافد فنتك 2026 &nbsp;·&nbsp; جامعة الإمام محمد بن سعود الإسلامية &nbsp;·&nbsp; الرياض
+</div>
+
+<script>
+// Scroll simulation for screenshot stitching
+const p = new URLSearchParams(location.search).get('s');
+if(p) {
+  document.documentElement.style.overflow = 'hidden';
+  document.body.style.marginTop = '-' + (parseInt(p)*720) + 'px';
+}
+</script>
+</body>
+</html>

@@ -6,3 +6,9 @@ id = "omSZkIBDSeQXxm_RaN_TW"
 uri = "file://screenshots/poster_rawafid_2026.jpg"
 type = "image"
 title = "بوستر معرض روافد فنتك 2026"
+
+[[outputs]]
+id = "JYLAIKBBjqr3FV6ViKfJu"
+uri = "file://screenshots/poster_v2.jpg"
+type = "image"
+title = "بوستر معرض روافد فنتك 2026 — تصميم الموقع"
