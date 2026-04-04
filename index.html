@@ -905,8 +905,13 @@ html,body{background-color:var(--green4)!important;overscroll-behavior:none;min-
   },{threshold:.05,rootMargin:'0px 0px -10px 0px'});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 
+  // Fallback: make all reveals visible after hash navigation or after short delay
+  function revealAll(){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible')});}
+  if(window.location.hash){setTimeout(revealAll,200);}
+  window.addEventListener('hashchange',function(){setTimeout(revealAll,200);});
+
   // Stagger children
-  ['.why-grid','.sum-grid','.ct-cards','.feat-grid','.h-nums','.org-row','.meeting-cards'].forEach(function(s){
+  ['.why-grid','.sum-grid','.ct-cards','.feat-grid','.h-nums','.org-row','.meeting-cards','.booth-grid','.venue-cards'].forEach(function(s){
     var p=document.querySelector(s);
     if(!p)return;
     Array.from(p.children).forEach(function(ch,i){ch.style.transitionDelay=(i*.06)+'s'});
