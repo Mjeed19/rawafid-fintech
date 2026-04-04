@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "omSZkIBDSeQXxm_RaN_TW"
+uri = "file://screenshots/poster_rawafid_2026.jpg"
+type = "image"
+title = "بوستر معرض روافد فنتك 2026"

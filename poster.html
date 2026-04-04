@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<title>بوستر – معرض روافد فنتك 2026</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --g1:#0B1F13;
+  --g2:#0d2818;
+  --g3:#0f3020;
+  --glt:#3DAA86;
+  --glt2:#52c99f;
+  --gold:#F4C250;
+  --strat:#7EC8E3;
+}
+body{
+  width:1080px;
+  background:var(--g1);
+  font-family:'Tajawal',sans-serif;
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+}
+.poster{
+  width:1080px;
+  min-height:1920px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  background:var(--g1);
+}
+
+/* ══ HERO BG ══ */
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background:url('/poster_bg.webp') center/cover no-repeat;
+  opacity:.13;
+  z-index:0;
+}
+.hero-bg-fade{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(11,31,19,.6) 0%,rgba(11,31,19,.1) 25%,rgba(11,31,19,.05) 50%,rgba(11,31,19,.7) 75%,rgba(11,31,19,1) 100%);
+  z-index:1;
+}
+.content{position:relative;z-index:2;display:flex;flex-direction:column}
+
+/* ══ TOP BAR ══ */
+.top-bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:36px 56px 28px;
+  border-bottom:1px solid rgba(61,170,134,.2);
+}
+.brand{font-family:'Cairo',sans-serif;font-size:1.25rem;font-weight:900;letter-spacing:.02em}
+.brand span{color:var(--glt)}
+.pill{
+  background:rgba(61,170,134,.15);
+  border:1px solid rgba(61,170,134,.35);
+  border-radius:100px;
+  padding:6px 20px;
+  font-size:.75rem;
+  color:var(--glt2);
+  font-weight:700;
+  letter-spacing:.05em;
+}
+
+/* ══ HERO SECTION ══ */
+.hero-sec{
+  padding:52px 56px 48px;
+  text-align:center;
+}
+.event-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(61,170,134,.12);
+  border:1px solid rgba(61,170,134,.3);
+  border-radius:100px;
+  padding:7px 22px;
+  font-size:.78rem;
+  color:var(--glt2);
+  font-weight:700;
+  letter-spacing:.06em;
+  margin-bottom:28px;
+}
+.event-name{
+  font-family:'Cairo',sans-serif;
+  font-size:4.8rem;
+  font-weight:900;
+  line-height:1.05;
+  letter-spacing:-.02em;
+  margin-bottom:8px;
+}
+.event-name .accent{
+  background:linear-gradient(135deg,#3DAA86,#52c99f,#7de8c5);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.event-sub{
+  font-size:1.05rem;
+  color:rgba(255,255,255,.5);
+  margin-bottom:36px;
+  line-height:1.8;
+}
+.event-sub strong{color:rgba(255,255,255,.8)}
+
+/* ══ INFO STRIP ══ */
+.info-strip{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin:0 56px 52px;
+}
+.info-card{
+  flex:1;
+  min-width:180px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:14px;
+  padding:20px 24px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.info-ic{font-size:1.6rem}
+.info-lbl{font-size:.68rem;color:rgba(255,255,255,.4);letter-spacing:.08em;margin-bottom:3px}
+.info-val{font-family:'Cairo',sans-serif;font-size:.98rem;font-weight:800;color:#fff;line-height:1.3}
+
+/* ══ DIVIDER ══ */
+.divider{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:0 56px;
+  margin-bottom:36px;
+}
+.div-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(61,170,134,.4),transparent)}
+.div-label{
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:.12em;
+  color:var(--glt);
+  white-space:nowrap;
+}
+
+/* ══ PACKAGES ══ */
+.packages-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  padding:0 56px;
+  margin-bottom:52px;
+}
+.pkg{
+  border-radius:16px;
+  padding:24px 18px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap:8px;
+  border:1px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.04);
+  position:relative;
+  overflow:hidden;
+}
+.pkg::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:3px;
+  border-radius:3px 3px 0 0;
+}
+.pkg-strat::before{background:linear-gradient(90deg,#7EC8E3,#a8dff0)}
+.pkg-gold::before{background:linear-gradient(90deg,#F4C250,#ffd96a)}
+.pkg-silver::before{background:linear-gradient(90deg,#98A8B8,#bcc9d4)}
+.pkg-part::before{background:linear-gradient(90deg,#3DAA86,#52c99f)}
+.pkg-strat{border-color:rgba(126,200,227,.2);background:rgba(126,200,227,.05)}
+.pkg-gold{border-color:rgba(244,194,80,.2);background:rgba(244,194,80,.05)}
+.pkg-silver{border-color:rgba(152,168,184,.15);background:rgba(152,168,184,.04)}
+.pkg-part{border-color:rgba(61,170,134,.2);background:rgba(61,170,134,.05)}
+.pkg-ic{font-size:1.6rem}
+.pkg-name{
+  font-family:'Cairo',sans-serif;
+  font-size:.9rem;
+  font-weight:900;
+  color:#fff;
+  line-height:1.2;
+}
+.pkg-price{
+  font-family:'Cairo',sans-serif;
+  font-size:1.55rem;
+  font-weight:900;
+  line-height:1;
+}
+.pkg-strat .pkg-price{color:#7EC8E3}
+.pkg-gold .pkg-price{color:#F4C250}
+.pkg-silver .pkg-price{color:#98A8B8}
+.pkg-part .pkg-price{color:#3DAA86}
+.pkg-unit{font-size:.65rem;color:rgba(255,255,255,.4);margin-top:2px}
+.pkg-perk{
+  font-size:.68rem;
+  color:rgba(255,255,255,.55);
+  line-height:1.6;
+  margin-top:4px;
+}
+
+/* ══ ORGS ══ */
+.orgs-wrap{
+  padding:0 56px;
+  margin-bottom:52px;
+}
+.orgs-title{
+  font-size:.75rem;
+  font-weight:700;
+  letter-spacing:.12em;
+  color:rgba(255,255,255,.35);
+  margin-bottom:14px;
+  text-align:center;
+}
+.orgs-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+}
+.org-badge{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:8px;
+  padding:8px 16px;
+  font-family:'Cairo',sans-serif;
+  font-size:.82rem;
+  font-weight:700;
+  color:rgba(255,255,255,.8);
+}
+
+/* ══ BENEFITS ══ */
+.benefits-wrap{
+  padding:0 56px;
+  margin-bottom:52px;
+}
+.benefits-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+.benefit{
+  background:rgba(61,170,134,.07);
+  border:1px solid rgba(61,170,134,.15);
+  border-radius:12px;
+  padding:18px 20px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.benefit-ic{font-size:1.3rem;flex-shrink:0}
+.benefit-text{
+  font-size:.82rem;
+  font-weight:700;
+  color:rgba(255,255,255,.85);
+  line-height:1.35;
+}
+
+/* ══ FOOTER / CONTACT ══ */
+.contact-bar{
+  margin:0 56px 48px;
+  background:rgba(61,170,134,.1);
+  border:1px solid rgba(61,170,134,.25);
+  border-radius:16px;
+  padding:28px 36px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.contact-cta{
+  font-family:'Cairo',sans-serif;
+  font-size:1.25rem;
+  font-weight:900;
+  color:#fff;
+}
+.contact-cta span{color:var(--glt)}
+.contact-items{
+  display:flex;
+  gap:24px;
+  align-items:center;
+}
+.contact-item{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(255,255,255,.06);
+  border-radius:10px;
+  padding:10px 18px;
+}
+.contact-item-ic{font-size:1rem}
+.contact-item-val{
+  font-family:'Cairo',sans-serif;
+  font-size:.85rem;
+  font-weight:700;
+  color:#fff;
+  direction:ltr;
+}
+
+.footer-line{
+  text-align:center;
+  padding:0 0 40px;
+  font-size:.72rem;
+  color:rgba(255,255,255,.25);
+  letter-spacing:.06em;
+}
+</style>
+</head>
+<body>
+<div class="poster">
+  <div class="hero-bg"></div>
+  <div class="hero-bg-fade"></div>
+  <div class="content">
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div class="brand">معرض <span>روافد فنتك</span></div>
+      <div class="pill">فرصة رعاية · 2026</div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero-sec">
+      <div class="event-badge">🎯 ملخص الرعاية والمشاركة</div>
+      <div class="event-name">
+        معرض<br><span class="accent">روافد فنتك 2026</span>
+      </div>
+      <div class="event-sub">
+        <strong>برعاية جامعة الإمام محمد بن سعود الإسلامية</strong><br>
+        بإشراف كلية علوم الحاسب وكلية الاعمال
+      </div>
+    </div>
+
+    <!-- INFO STRIP -->
+    <div class="info-strip">
+      <div class="info-card">
+        <div class="info-ic">📅</div>
+        <div>
+          <div class="info-lbl">التاريخ</div>
+          <div class="info-val">5 – 6 مايو 2026</div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-ic">🕐</div>
+        <div>
+          <div class="info-lbl">الوقت</div>
+          <div class="info-val">8:30 ص – 12:00 م</div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-ic">📍</div>
+        <div>
+          <div class="info-lbl">الموقع</div>
+          <div class="info-val">بهو جامعة الإمام · الرياض</div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-ic">🎓</div>
+        <div>
+          <div class="info-lbl">الحضور المتوقع</div>
+          <div class="info-val">+3000 طالب وطالبة</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PACKAGES DIVIDER -->
+    <div class="divider">
+      <div class="div-line"></div>
+      <div class="div-label">باقات الرعاية</div>
+      <div class="div-line"></div>
+    </div>
+
+    <!-- PACKAGES -->
+    <div class="packages-grid">
+      <div class="pkg pkg-strat">
+        <div class="pkg-ic">🏅</div>
+        <div class="pkg-name">الراعي الاستراتيجي</div>
+        <div class="pkg-price">12,000</div>
+        <div class="pkg-unit">ريال سعودي</div>
+        <div class="pkg-perk">أعلى مستوى ظهور · أولوية كاملة في المسرح والإعلام</div>
+      </div>
+      <div class="pkg pkg-gold">
+        <div class="pkg-ic">🥇</div>
+        <div class="pkg-name">الراعي الذهبي</div>
+        <div class="pkg-price">6,000</div>
+        <div class="pkg-unit">ريال سعودي</div>
+        <div class="pkg-perk">حضور بارز · بوث + كلمة + تغطية إعلامية</div>
+      </div>
+      <div class="pkg pkg-silver">
+        <div class="pkg-ic">🤝</div>
+        <div class="pkg-name">شركاء النجاح</div>
+        <div class="pkg-price">عيني</div>
+        <div class="pkg-unit">بدون رسوم نقدية</div>
+        <div class="pkg-perk">هدايا أو خدمات مقابل ذكر رسمي وشارة شريك</div>
+      </div>
+      <div class="pkg pkg-part">
+        <div class="pkg-ic">🎪</div>
+        <div class="pkg-name">المشاركون في المعرض</div>
+        <div class="pkg-price">تسجيل</div>
+        <div class="pkg-unit">بوث مستقل</div>
+        <div class="pkg-perk">احضر بوثك أو استأجر بوثاً مجهزاً بالكامل</div>
+      </div>
+    </div>
+
+    <!-- ORGS DIVIDER -->
+    <div class="divider">
+      <div class="div-line"></div>
+      <div class="div-label">أبرز المشاركين المتوقعين</div>
+      <div class="div-line"></div>
+    </div>
+
+    <!-- ORGS -->
+    <div class="orgs-wrap">
+      <div class="orgs-row">
+        <div class="org-badge">البنك المركزي SAMA</div>
+        <div class="org-badge">فنتك السعودية</div>
+        <div class="org-badge">SDAIA</div>
+        <div class="org-badge">وزارة الاستثمار</div>
+        <div class="org-badge">الأكاديمية المالية</div>
+        <div class="org-badge">STC Bank</div>
+        <div class="org-badge">بنك الإنماء</div>
+        <div class="org-badge">بنك الرياض</div>
+        <div class="org-badge">تمارا · Tamara</div>
+        <div class="org-badge">Tabby</div>
+        <div class="org-badge">EY</div>
+        <div class="org-badge">PwC</div>
+      </div>
+    </div>
+
+    <!-- BENEFITS DIVIDER -->
+    <div class="divider">
+      <div class="div-line"></div>
+      <div class="div-label">أبرز مزايا الرعاية</div>
+      <div class="div-line"></div>
+    </div>
+
+    <!-- BENEFITS -->
+    <div class="benefits-wrap">
+      <div class="benefits-grid">
+        <div class="benefit">
+          <div class="benefit-ic">📣</div>
+          <div class="benefit-text">إعلان في كل منشور قبل وخلال وبعد الفعالية</div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-ic">🎙️</div>
+          <div class="benefit-text">حضور على المسرح أمام آلاف الحضور</div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-ic">🎓</div>
+          <div class="benefit-text">وصول مباشر لأكثر من 3000 طالب وطالبة</div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-ic">📸</div>
+          <div class="benefit-text">تغطية مصورة احترافية لجناحك وفريقك</div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-ic">🏆</div>
+          <div class="benefit-text">درع تكريمي رسمي في حفل الختام</div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-ic">📊</div>
+          <div class="benefit-text">تقرير إحصائي لقياس العائد بعد الفعالية</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-bar">
+      <div class="contact-cta">تواصل معنا <span>وانضم الآن</span></div>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="contact-item-ic">📧</div>
+          <div class="contact-item-val">pr.technationclub@gmail.com</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-ic">📱</div>
+          <div class="contact-item-val" dir="ltr">+966 53 483 1944</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-line">معرض روافد فنتك 2026 · جامعة الإمام محمد بن سعود الإسلامية · الرياض</div>
+
+  </div>
+</div>
+</body>
+</html>
