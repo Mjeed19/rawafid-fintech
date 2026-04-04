@@ -12,3 +12,9 @@ id = "JYLAIKBBjqr3FV6ViKfJu"
 uri = "file://screenshots/poster_v2.jpg"
 type = "image"
 title = "بوستر معرض روافد فنتك 2026 — تصميم الموقع"
+
+[[outputs]]
+id = "M-yM8Rfy5Kc5vi6xPrPXO"
+uri = "file://screenshots/poster_wa.jpg"
+type = "image"
+title = "بوستر واتساب — معرض روافد فنتك 2026"
