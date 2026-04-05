@@ -42,3 +42,9 @@ id = "db7sAxWgS0QXZK_RfEX8F"
 uri = "file://screenshots/poster_ig.jpg"
 type = "image"
 title = "Rawafid Fintech 2026 — Instagram Poster (1080×1350)"
+
+[[outputs]]
+id = "9zifbaw3g7oQFCIBH47xq"
+uri = "file://screenshots/poster_ig_hq.jpg"
+type = "image"
+title = "Rawafid Fintech 2026 — Instagram HD (1080×1350)"

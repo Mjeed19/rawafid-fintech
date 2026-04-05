@@ -544,13 +544,25 @@ html, body {
 function scale() {
   const poster  = document.getElementById('poster');
   const wrapper = document.getElementById('wrapper');
+  const params  = new URLSearchParams(location.search);
   const vw = window.innerWidth;
   const vh = window.innerHeight;
   const PW = 1080, PH = 1350;
-  const fitFull = new URLSearchParams(location.search).get('full') === '1';
-  const s = fitFull
-    ? Math.min(vw / PW, vh / PH)          // يحشر الكل في الشاشة دفعة واحدة
-    : Math.min(vw / PW, 1);               // عرض كامل + تمرير عمودي
+
+  // ?clip=N → عرض بدون تحجيم، نافذة 720px ترى من pixel N للأسفل
+  const clip = parseInt(params.get('clip') || '-1');
+  if (clip >= 0) {
+    poster.style.transform = 'none';
+    poster.style.marginTop  = -clip + 'px';
+    wrapper.style.height    = '720px';
+    wrapper.style.overflow  = 'hidden';
+    document.body.style.overflow = 'hidden';
+    return;
+  }
+
+  // ?full=1 → يحشر كله بالشاشة
+  const fitFull = params.get('full') === '1';
+  const s = fitFull ? Math.min(vw/PW, vh/PH) : Math.min(vw/PW, 1);
   poster.style.transform = `scale(${s})`;
   poster.style.transformOrigin = 'top center';
   wrapper.style.height = (PH * s) + 'px';
