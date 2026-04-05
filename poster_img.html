@@ -9,8 +9,13 @@
 
 html, body {
   background:#0a0a0a;
-  display:flex; align-items:flex-start; justify-content:center;
-  min-height:100vh; padding:0;
+  margin:0; padding:0; overflow-x:hidden;
+}
+
+/* wrapper يأخذ الارتفاع الصحيح بعد التحجيم */
+#wrapper {
+  display:flex; justify-content:center;
+  width:100%;
 }
 
 /* ──────────────────────────────────────
@@ -354,6 +359,7 @@ html, body {
 <!-- ══════════════════════════════════════
      POSTER
 ══════════════════════════════════════ -->
+<div id="wrapper">
 <div id="poster">
 
   <!-- HERO -->
@@ -534,6 +540,7 @@ html, body {
   </div>
 
 </div><!-- /poster -->
+</div><!-- /wrapper -->
 
 <!-- ══════════════════════════════════════
      MODALS — خارج #poster
@@ -652,17 +659,17 @@ html, body {
 </div>
 
 <script>
-// ── Auto-scale ─────────────────────────────────────
+// ── Auto-scale (عرض كامل + تمرير عمودي) ───────────
 function scale() {
-  const poster = document.getElementById('poster');
+  const poster  = document.getElementById('poster');
+  const wrapper = document.getElementById('wrapper');
   const vw = window.innerWidth;
-  const vh = window.innerHeight;
   const PW = 1080, PH = 1800;
-  const s = Math.min(vw / PW, vh / PH, 1);
+  const s = Math.min(vw / PW, 1); // يتصغر فقط إذا الشاشة أضيق من 1080
   poster.style.transform = `scale(${s})`;
-  const scaledH = PH * s;
-  document.body.style.paddingTop  = Math.max(0, (vh - scaledH) / 2) + 'px';
-  document.body.style.paddingBottom = '20px';
+  poster.style.transformOrigin = 'top center';
+  // اجعل الـ wrapper بنفس الارتفاع المرئي حتى يمشي التمرير صح
+  wrapper.style.height = (PH * s) + 'px';
 }
 scale();
 window.addEventListener('resize', scale);
