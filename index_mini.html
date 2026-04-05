@@ -26,32 +26,34 @@ nav{position:sticky;top:0;z-index:99;display:flex;align-items:center;justify-con
 @media(max-width:600px){.n-links{display:none}}
 
 /* ─── HERO ─── */
-.hero{min-height:92svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px clamp(16px,4vw,48px) 60px;position:relative;overflow:hidden}
-.h-bg{position:absolute;inset:0;background:radial-gradient(ellipse 130% 65% at 50% -5%,rgba(27,107,82,.55) 0%,transparent 55%),radial-gradient(ellipse 55% 55% at 5% 95%,rgba(42,138,106,.12) 0%,transparent 50%)}
-.h-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(61,170,134,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(61,170,134,.05) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 85% 85% at 50% 40%,black 25%,transparent 72%);animation:gm 20s linear infinite}
-@keyframes gm{to{background-position:56px 56px}}
-.h-glow{position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(61,170,134,.6) 50%,transparent)}
-.h-content{position:relative;z-index:2;max-width:660px}
-.h-pill{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(61,170,134,.28);background:rgba(61,170,134,.07);color:var(--glt);font-size:.65rem;font-weight:700;padding:4px 13px;border-radius:100px;margin-bottom:16px;letter-spacing:2px;text-transform:uppercase}
+.hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px clamp(16px,4vw,48px) 64px;position:relative;overflow:hidden;min-height:100svh}
+.h-bg{position:absolute;inset:0;background:radial-gradient(ellipse 110% 60% at 50% -5%,rgba(27,107,82,.5) 0%,transparent 55%)}
+.h-glow{position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(61,170,134,.5) 50%,transparent)}
+.h-content{position:relative;z-index:2;max-width:680px;width:100%}
+.h-pill{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(61,170,134,.25);background:rgba(61,170,134,.06);color:var(--glt);font-size:.62rem;font-weight:700;padding:4px 12px;border-radius:100px;margin-bottom:18px;letter-spacing:2px;text-transform:uppercase}
 .dot{width:5px;height:5px;background:var(--glt);border-radius:50%;animation:bl 1.5s infinite}
 @keyframes bl{0%,100%{opacity:1}50%{opacity:.15}}
-h1{font-family:'Cairo',sans-serif;font-size:clamp(2.8rem,7vw,6rem);font-weight:900;line-height:1.1;letter-spacing:-1px;margin-bottom:6px}
-h1 .sub{display:block;font-size:.36em;font-weight:800;color:rgba(255,255,255,.7);letter-spacing:1px;margin-bottom:2px}
-h1 .gr{background:linear-gradient(135deg,var(--glt),#8FFFDA 50%,var(--glt));background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:sh 4s ease infinite}
+h1{font-family:'Cairo',sans-serif;font-size:clamp(3rem,8vw,6.5rem);font-weight:900;line-height:1.05;letter-spacing:-1px;margin-bottom:4px}
+h1 .sub{display:block;font-size:.3em;font-weight:700;color:rgba(255,255,255,.55);letter-spacing:2px;margin-bottom:4px}
+h1 .gr{background:linear-gradient(135deg,var(--glt),#8FFFDA 50%,var(--glt));background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:sh 5s ease infinite}
 @keyframes sh{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
-.h-sub{font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:24px;line-height:1.7}
-.h-sub strong{color:rgba(255,255,255,.9);font-weight:700}
-.info-row{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
-.ir{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:8px 14px;text-align:center;min-width:110px}
-.ir-v{font-family:'Cairo',sans-serif;font-size:.88rem;font-weight:900;line-height:1}
-.ir-l{font-size:.55rem;color:rgba(255,255,255,.38);margin-top:2px}
-.h-btns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
-.btn-p{background:var(--g1);color:#fff;padding:11px 24px;border:1px solid var(--glt);border-radius:7px;font-family:'Tajawal',sans-serif;font-size:.85rem;font-weight:800;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 18px rgba(27,107,82,.35)}
+.h-desc{font-size:.82rem;color:rgba(255,255,255,.5);margin:10px 0 28px;line-height:1.65}
+.h-desc strong{color:rgba(255,255,255,.85);font-weight:700}
+
+/* info tags inline */
+.info-tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.itag{display:inline-flex;align-items:center;gap:5px;font-size:.74rem;font-weight:600;color:rgba(255,255,255,.7);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:6px;padding:5px 11px}
+.itag-dot{width:5px;height:5px;border-radius:50%;background:var(--glt);flex-shrink:0}
+
+/* stats row in hero */
+.h-stats{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.hs{text-align:center;padding:0 14px;border-left:1px solid rgba(255,255,255,.08)}
+.hs:first-child{border-left:none}
+.hs-n{font-family:'Cairo',sans-serif;font-size:1.4rem;font-weight:900;color:#fff;line-height:1}
+.hs-l{font-size:.58rem;color:rgba(255,255,255,.38);margin-top:3px}
+
+.btn-p{background:var(--g1);color:#fff;padding:11px 28px;border:1px solid var(--glt);border-radius:7px;font-family:'Tajawal',sans-serif;font-size:.88rem;font-weight:800;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block}
 .btn-p:hover{background:var(--gm);transform:translateY(-2px)}
-.btn-s{background:rgba(255,255,255,.07);color:#fff;padding:11px 20px;border:1px solid rgba(255,255,255,.15);border-radius:7px;font-family:'Tajawal',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer;transition:all .3s;text-decoration:none}
-.btn-s:hover{background:rgba(255,255,255,.12)}
-.scroll-hint{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:1px;height:28px;background:linear-gradient(to bottom,rgba(61,170,134,.6),transparent);animation:sl 2s ease-in-out infinite}
-@keyframes sl{0%{opacity:0;transform:translateX(-50%) scaleY(0);transform-origin:top}50%{opacity:1;transform:translateX(-50%) scaleY(1)}100%{opacity:0;transform:translateX(-50%) scaleY(1);transform-origin:bottom}}
 
 /* ─── STATS BAR ─── */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(--g1);border-bottom:2px solid var(--g2)}
@@ -174,7 +176,6 @@ footer{background:var(--g4);border-top:1px solid rgba(61,170,134,.08);padding:18
 <!-- HERO -->
 <section class="hero">
   <div class="h-bg"></div>
-  <div class="h-grid"></div>
   <div class="h-glow"></div>
   <div class="h-content">
     <div class="h-pill"><span class="dot"></span>فرصة رعاية · 2026</div>
@@ -182,30 +183,24 @@ footer{background:var(--g4);border-top:1px solid rgba(61,170,134,.08);padding:18
       <span class="sub">معرض</span>
       <span class="gr">روافد فنتك</span>
     </h1>
-    <p class="h-sub">
+    <p class="h-desc">
       <strong>أكبر معرض فنتك أكاديمي بالمملكة العربية السعودية</strong><br>
       برعاية جامعة الإمام محمد بن سعود الإسلامية · كلية علوم الحاسب والأعمال
     </p>
-    <div class="info-row">
-      <div class="ir"><div class="ir-v">5–6 مايو 2026</div><div class="ir-l">التاريخ</div></div>
-      <div class="ir"><div class="ir-v">8:30 – 12:00</div><div class="ir-l">الوقت</div></div>
-      <div class="ir"><div class="ir-v">بهو جامعة الإمام</div><div class="ir-l">الرياض</div></div>
+    <div class="info-tags">
+      <span class="itag"><span class="itag-dot"></span>5–6 مايو 2026</span>
+      <span class="itag"><span class="itag-dot"></span>8:30 – 12:00 ص</span>
+      <span class="itag"><span class="itag-dot"></span>بهو جامعة الإمام · الرياض</span>
     </div>
-    <div class="h-btns">
-      <a href="#packages" class="btn-p">باقات الرعاية</a>
-      <a href="#contact" class="btn-s">احجز اجتماع الرعاية</a>
+    <div class="h-stats">
+      <div class="hs"><div class="hs-n">+3000</div><div class="hs-l">زائر متوقع</div></div>
+      <div class="hs"><div class="hs-n">يومان</div><div class="hs-l">تواجد كامل</div></div>
+      <div class="hs"><div class="hs-n">+20</div><div class="hs-l">جهة مشاركة</div></div>
+      <div class="hs"><div class="hs-n">5</div><div class="hs-l">أركان رئيسية</div></div>
     </div>
+    <a href="#packages" class="btn-p">اطّلع على باقات الرعاية</a>
   </div>
-  <div class="scroll-hint"></div>
 </section>
-
-<!-- STATS -->
-<div class="stats">
-  <div class="st"><div class="st-n">+3000</div><div class="st-l">زائر متوقع</div></div>
-  <div class="st"><div class="st-n">يومان</div><div class="st-l">تواجد كامل</div></div>
-  <div class="st"><div class="st-n">+20</div><div class="st-l">جهة مشاركة</div></div>
-  <div class="st"><div class="st-n">5</div><div class="st-l">أركان رئيسية</div></div>
-</div>
 
 <!-- PACKAGES -->
 <div style="background:rgba(9,26,20,.5)">
