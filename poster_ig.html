@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Rawafid Fintech 2026 — Instagram Poster</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html, body {
+  background:#050a06;
+  display:flex; align-items:flex-start; justify-content:center;
+  min-height:100vh; overflow-x:hidden;
+}
+
+#wrapper { display:flex; justify-content:center; width:100%; }
+
+/* ══ POSTER 1080×1350 (4:5) ══ */
+#poster {
+  width:1080px; height:1350px;
+  position:relative; overflow:hidden;
+  transform-origin:top center;
+  font-family:'Cairo','Inter',sans-serif;
+  flex-shrink:0;
+}
+
+/* ── BACKGROUND ── */
+.bg {
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 70% 55% at 15% 10%, rgba(20,90,60,.65) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 88% 80%, rgba(5,60,35,.55) 0%, transparent 50%),
+    radial-gradient(ellipse 35% 30% at 75% 15%, rgba(61,170,100,.08) 0%, transparent 50%),
+    linear-gradient(160deg, #020806 0%, #040d07 30%, #071510 60%, #020806 100%);
+}
+.bg-img {
+  position:absolute; inset:0;
+  background:url('/poster_bg.webp') center/cover no-repeat;
+  opacity:.04; mix-blend-mode:luminosity;
+}
+/* شبكة دقيقة */
+.bg-grid {
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(rgba(61,170,100,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(61,170,100,.04) 1px, transparent 1px);
+  background-size:54px 54px;
+}
+/* خطوط نيون أفقية */
+.bg-lines {
+  position:absolute; inset:0;
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(61,200,120,.06) 50%, transparent 100%);
+  top:320px; height:2px;
+}
+/* حلقات دائرية */
+.ring {
+  position:absolute; border-radius:50%;
+  border:1px solid rgba(61,200,120,.1);
+  pointer-events:none;
+}
+.ra{width:680px;height:680px;top:-200px;right:-200px;}
+.rb{width:440px;height:440px;top:-80px;right:-80px;border-color:rgba(61,200,120,.07);}
+.rc{width:240px;height:240px;top:90px;right:90px;border-color:rgba(61,200,120,.13);}
+.rd{width:520px;height:520px;bottom:-200px;left:-180px;border-color:rgba(180,220,100,.05);}
+
+/* ══ SECTION 1: HEADER  0–370 ══ */
+.s-header {
+  position:absolute; top:0; left:0; right:0; height:370px;
+  display:flex; flex-direction:column; align-items:center;
+  justify-content:center; text-align:center;
+  padding:0 70px; position:absolute; z-index:5;
+}
+
+.top-badge {
+  display:inline-flex; align-items:center; gap:10px;
+  border:1px solid rgba(61,200,120,.35);
+  background:rgba(61,200,120,.07);
+  backdrop-filter:blur(8px);
+  border-radius:100px; padding:7px 24px;
+  font-size:.65rem; font-weight:700;
+  letter-spacing:4px; text-transform:uppercase;
+  color:#5de8a0; margin-bottom:24px;
+  box-shadow:0 0 20px rgba(61,200,120,.12), inset 0 1px 0 rgba(255,255,255,.06);
+}
+.tb-dot {
+  width:7px; height:7px; border-radius:50%;
+  background:#5de8a0; box-shadow:0 0 10px #5de8a0;
+  animation:pulse 2s infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.8)} }
+
+.h-sub  {
+  font-size:1.1rem; font-weight:700; color:rgba(255,255,255,.55);
+  letter-spacing:.12em; text-transform:uppercase; margin-bottom:8px;
+}
+.h-main {
+  font-family:'Cairo',sans-serif;
+  font-size:5.2rem; font-weight:900; line-height:.95;
+  background:linear-gradient(135deg, #3daa64 0%, #5de8a0 40%, #c8fada 70%, #3daa64 100%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  filter:drop-shadow(0 0 40px rgba(61,200,120,.4));
+  margin-bottom:6px;
+}
+.h-en {
+  font-family:'Inter',sans-serif;
+  font-size:1.45rem; font-weight:800; letter-spacing:.06em;
+  color:rgba(255,255,255,.22); text-transform:uppercase; margin-bottom:18px;
+}
+.h-desc {
+  font-size:.82rem; color:rgba(255,255,255,.38); line-height:1.85;
+  max-width:700px;
+}
+.h-desc strong { color:rgba(255,255,255,.68); }
+
+/* ══ SECTION 2: INFO BAR  370–450 ══ */
+.s-info {
+  position:absolute; top:370px; left:0; right:0; height:80px;
+  background:rgba(10,28,16,.85);
+  backdrop-filter:blur(12px);
+  border-top:1px solid rgba(61,200,120,.2);
+  border-bottom:1px solid rgba(61,200,120,.1);
+  display:flex; align-items:stretch; z-index:5;
+}
+.info-item {
+  flex:1; display:flex; align-items:center; gap:14px; padding:0 30px;
+}
+.info-item+.info-item { border-right:1px solid rgba(255,255,255,.06); }
+.info-icon {
+  width:38px; height:38px; border-radius:10px; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.05rem;
+  background:rgba(61,200,120,.1); border:1px solid rgba(61,200,120,.2);
+  box-shadow:0 0 12px rgba(61,200,120,.1);
+}
+.info-lbl { font-size:.52rem; color:rgba(255,255,255,.26); letter-spacing:.1em; text-transform:uppercase; margin-bottom:4px; }
+.info-val { font-family:'Cairo',sans-serif; font-size:.9rem; font-weight:800; color:#fff; direction:ltr; }
+
+/* ══ SECTION 3: PACKAGES  450–870 ══ */
+.s-packages {
+  position:absolute; top:450px; left:0; right:0; height:420px;
+  padding:28px 40px 0; z-index:5;
+}
+.sec-label {
+  display:flex; align-items:center; gap:10px; margin-bottom:18px;
+}
+.sec-line { width:28px; height:2px; background:linear-gradient(90deg,#5de8a0,transparent); }
+.sec-lbl-txt {
+  font-size:.6rem; font-weight:800; letter-spacing:4px;
+  text-transform:uppercase; color:#5de8a0;
+}
+.sec-title {
+  font-family:'Cairo',sans-serif; font-size:1.6rem; font-weight:900;
+  color:#fff; line-height:1.2; margin-bottom:20px;
+}
+.sec-title em {
+  font-style:normal;
+  background:linear-gradient(120deg,#3daa64,#5de8a0,#c8fada);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+
+.pkg-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+
+/* glassmorphism card */
+.pkg-card {
+  border-radius:16px; overflow:hidden;
+  background:rgba(255,255,255,.03);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.08);
+  position:relative;
+  transition:transform .2s, box-shadow .2s;
+}
+.pkg-card:hover {
+  transform:translateY(-3px);
+  box-shadow:0 16px 48px rgba(0,0,0,.4);
+}
+/* glow top border */
+.pkg-card::before {
+  content:''; position:absolute; top:0; left:10%; right:10%; height:1px;
+  border-radius:100px;
+}
+.pkg-strat::before { background:linear-gradient(90deg,transparent,#D4A84B,transparent); }
+.pkg-gold::before  { background:linear-gradient(90deg,transparent,#5de8a0,transparent); }
+
+.pkg-head {
+  padding:20px 20px 16px; position:relative; overflow:hidden;
+}
+.pkg-head::after {
+  content:''; position:absolute;
+  width:140px; height:140px; border-radius:50%;
+  background:rgba(255,255,255,.05);
+  top:-50px; left:-35px;
+}
+.pkg-type { font-size:.54rem; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,.45); margin-bottom:5px; position:relative; z-index:2; }
+.pkg-name { font-family:'Cairo',sans-serif; font-size:1.15rem; font-weight:900; color:#fff; line-height:1.2; position:relative; z-index:2; }
+.pkg-en   { font-size:.6rem; color:rgba(255,255,255,.38); margin-top:2px; position:relative; z-index:2; }
+
+.pkg-strat .pkg-head { background:linear-gradient(135deg,rgba(180,120,20,.6),rgba(212,168,75,.4)); }
+.pkg-gold  .pkg-head { background:linear-gradient(135deg,rgba(15,90,50,.7),rgba(61,170,100,.4)); }
+
+.pkg-price {
+  display:inline-flex; align-items:baseline; gap:5px; margin-top:10px;
+  position:relative; z-index:2;
+}
+.pp-num {
+  font-family:'Cairo',sans-serif; font-size:2rem; font-weight:900;
+  direction:ltr; line-height:1;
+}
+.pp-num.sm { font-size:1.4rem; }
+.pkg-strat .pp-num { color:#E8C568; text-shadow:0 0 20px rgba(212,168,75,.5); }
+.pkg-gold  .pp-num { color:#5de8a0; text-shadow:0 0 20px rgba(61,200,120,.4); }
+.pp-cur { font-size:.62rem; color:rgba(255,255,255,.45); margin-bottom:4px; }
+.pp-badge {
+  display:inline-block; font-size:.44rem; font-weight:800;
+  letter-spacing:2px; text-transform:uppercase;
+  padding:3px 8px; border-radius:4px; margin-right:8px;
+}
+.pkg-strat .pp-badge { background:rgba(212,168,75,.2); color:#D4A84B; border:1px solid rgba(212,168,75,.3); }
+.pkg-gold  .pp-badge { background:rgba(61,200,120,.12); color:#5de8a0; border:1px solid rgba(61,200,120,.25); }
+
+.pkg-body { padding:14px 18px 16px; }
+.prow { display:flex; align-items:flex-start; gap:9px; padding:5px 0; border-bottom:1px solid rgba(255,255,255,.05); }
+.prow:last-child { border-bottom:none; }
+.prow-chk {
+  width:16px; height:16px; border-radius:5px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:.5rem; font-weight:900; color:#fff; flex-shrink:0; margin-top:2px;
+}
+.pkg-strat .prow-chk { background:rgba(180,120,20,.8); box-shadow:0 0 8px rgba(212,168,75,.3); }
+.pkg-gold  .prow-chk { background:rgba(20,100,60,.9);  box-shadow:0 0 8px rgba(61,200,120,.3); }
+.prow-txt { font-family:'Cairo',sans-serif; font-size:.75rem; font-weight:700; color:rgba(255,255,255,.8); line-height:1.4; }
+.prow-sub { font-size:.6rem; color:rgba(255,255,255,.3); margin-top:1px; }
+
+/* ══ SECTION 4: BOOTH + PARTNERS  870–1120 ══ */
+.s-lower {
+  position:absolute; top:870px; left:0; right:0; height:250px;
+  padding:0 40px; z-index:5;
+  display:grid; grid-template-columns:1fr 1fr; gap:14px;
+  align-items:start; padding-top:22px;
+}
+
+/* Booth box */
+.booth-box {
+  border-radius:14px; overflow:hidden;
+  background:rgba(255,255,255,.03);
+  backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.07);
+  padding:18px 18px 16px;
+  position:relative;
+}
+.booth-box::before {
+  content:''; position:absolute; top:0; left:8%; right:8%; height:1px;
+  background:linear-gradient(90deg,transparent,rgba(91,141,217,.5),transparent);
+}
+.bb-title { font-family:'Cairo',sans-serif; font-size:.88rem; font-weight:800; color:#fff; margin-bottom:12px; }
+.bb-row { display:flex; align-items:flex-start; gap:10px; padding:7px 0; border-bottom:1px solid rgba(255,255,255,.05); }
+.bb-row:last-child { border-bottom:none; }
+.bb-num {
+  width:22px; height:22px; border-radius:6px; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  font-size:.58rem; font-weight:900; color:#fff;
+  background:rgba(91,141,217,.25); border:1px solid rgba(91,141,217,.35);
+}
+.bb-name { font-family:'Cairo',sans-serif; font-size:.76rem; font-weight:800; color:rgba(255,255,255,.85); line-height:1.3; }
+.bb-desc { font-size:.6rem; color:rgba(255,255,255,.32); margin-top:2px; }
+
+/* Partners box */
+.partners-box {
+  border-radius:14px; overflow:hidden;
+  background:rgba(255,255,255,.03);
+  backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.07);
+  padding:18px 18px 16px;
+  position:relative;
+}
+.partners-box::before {
+  content:''; position:absolute; top:0; left:8%; right:8%; height:1px;
+  background:linear-gradient(90deg,transparent,rgba(168,101,212,.5),transparent);
+}
+.pb-title { font-family:'Cairo',sans-serif; font-size:.88rem; font-weight:800; color:#fff; margin-bottom:14px; }
+.pb-grid { display:flex; flex-wrap:wrap; gap:6px; }
+.pb-chip {
+  display:flex; align-items:center; gap:6px;
+  border-radius:8px; padding:5px 10px;
+  font-family:'Cairo',sans-serif; font-size:.68rem; font-weight:800;
+  border:1px solid;
+}
+.pb-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; }
+
+.chip-g { background:rgba(61,170,100,.08); border-color:rgba(61,170,100,.22); color:#5de8a0; }
+.chip-g .pb-dot { background:#5de8a0; }
+.chip-b { background:rgba(91,141,217,.08); border-color:rgba(91,141,217,.22); color:#7aaff5; }
+.chip-b .pb-dot { background:#7aaff5; }
+.chip-p { background:rgba(168,101,212,.08); border-color:rgba(168,101,212,.22); color:#c07cf5; }
+.chip-p .pb-dot { background:#c07cf5; }
+.chip-y { background:rgba(212,165,0,.1); border-color:rgba(212,165,0,.25); color:#f5c842; }
+.chip-y .pb-dot { background:#f5c842; }
+.chip-o { background:rgba(232,136,78,.08); border-color:rgba(232,136,78,.22); color:#f0a070; }
+.chip-o .pb-dot { background:#f0a070; }
+
+/* ══ SECTION 5: CONTACT  1120–1270 ══ */
+.s-contact {
+  position:absolute; top:1120px; left:0; right:0; height:150px;
+  padding:0 40px; z-index:5;
+  background:rgba(8,22,13,.7);
+  backdrop-filter:blur(12px);
+  border-top:1px solid rgba(61,200,120,.15);
+  display:flex; align-items:center; justify-content:space-between;
+}
+.sc-left {}
+.sc-tagline {
+  font-size:.6rem; font-weight:800; letter-spacing:3.5px;
+  text-transform:uppercase; color:rgba(255,255,255,.25); margin-bottom:8px;
+}
+.sc-cta {
+  font-family:'Cairo',sans-serif; font-size:1.55rem; font-weight:900; line-height:1.2;
+}
+.sc-cta em {
+  font-style:normal;
+  background:linear-gradient(120deg,#3daa64,#5de8a0,#c8fada);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+.sc-right { display:flex; flex-direction:column; gap:10px; }
+.contact-item {
+  display:flex; align-items:center; gap:11px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:11px; padding:10px 18px;
+  backdrop-filter:blur(8px);
+}
+.ci-icon {
+  width:34px; height:34px; border-radius:8px; flex-shrink:0;
+  background:linear-gradient(135deg,#3daa64,#1B6B52);
+  display:flex; align-items:center; justify-content:center;
+  font-size:.9rem;
+  box-shadow:0 4px 12px rgba(61,200,120,.25);
+}
+.ci-txt { font-family:'Cairo',sans-serif; font-size:.85rem; font-weight:700; direction:ltr; color:#fff; }
+
+/* ══ SECTION 6: FOOTER  1270–1350 ══ */
+.s-footer {
+  position:absolute; top:1270px; left:0; right:0; height:80px;
+  padding:0 40px;
+  display:flex; align-items:center; justify-content:space-between;
+  border-top:1px solid rgba(255,255,255,.06);
+  z-index:5;
+}
+.f-logo {
+  font-family:'Cairo',sans-serif; font-size:.95rem; font-weight:900;
+  background:linear-gradient(90deg,#3daa64,#5de8a0);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+.f-date {
+  display:flex; align-items:center; gap:8px;
+  background:rgba(61,200,120,.07);
+  border:1px solid rgba(61,200,120,.18);
+  border-radius:9px; padding:7px 14px;
+}
+.f-date-dot { width:7px; height:7px; border-radius:50%; background:#5de8a0; box-shadow:0 0 8px #5de8a0; animation:pulse 2s infinite; }
+.f-date-txt { font-family:'Cairo',sans-serif; font-size:.77rem; font-weight:800; color:#5de8a0; }
+.f-copy { font-size:.57rem; color:rgba(255,255,255,.16); }
+
+/* ══ NEON GLOW overlays ══ */
+.neon-top {
+  position:absolute; top:0; left:0; right:0; height:320px;
+  background:radial-gradient(ellipse 60% 40% at 50% 0%, rgba(61,200,120,.12) 0%, transparent 70%);
+  pointer-events:none; z-index:1;
+}
+.neon-mid {
+  position:absolute; top:800px; left:0; right:0; height:200px;
+  background:radial-gradient(ellipse 80% 50% at 50% 50%, rgba(61,200,120,.05) 0%, transparent 70%);
+  pointer-events:none; z-index:1;
+}
+</style>
+</head>
+<body>
+
+<div id="wrapper">
+<div id="poster">
+
+  <!-- Background layers -->
+  <div class="bg"></div>
+  <div class="bg-img"></div>
+  <div class="bg-grid"></div>
+  <div class="ring ra"></div>
+  <div class="ring rb"></div>
+  <div class="ring rc"></div>
+  <div class="ring rd"></div>
+  <div class="neon-top"></div>
+  <div class="neon-mid"></div>
+
+  <!-- ══ HEADER ══ -->
+  <div class="s-header">
+    <div class="top-badge">
+      <span class="tb-dot"></span>
+      Imam University · Riyadh · KSA
+    </div>
+    <div class="h-sub">معرض</div>
+    <div class="h-main">روافد فنتك</div>
+    <div class="h-en">Rawafid Fintech Exhibition 2026</div>
+    <p class="h-desc">
+      <strong>أكبر معرض فنتك أكاديمي بالمملكة العربية السعودية</strong> — منصة للابتكار المالي الرقمي،<br>
+      تجمع الشركات والمستثمرين والطلاب في بيئة تفاعلية احترافية لبناء مستقبل الخدمات المالية.
+    </p>
+  </div>
+
+  <!-- ══ INFO BAR ══ -->
+  <div class="s-info">
+    <div class="info-item">
+      <div class="info-icon">📅</div>
+      <div><div class="info-lbl">Date</div><div class="info-val">5 – 6 May 2026</div></div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">🕐</div>
+      <div><div class="info-lbl">Time</div><div class="info-val">8:30 AM – 12:00 PM</div></div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">📍</div>
+      <div><div class="info-lbl">Venue</div><div class="info-val">Imam University · Riyadh</div></div>
+    </div>
+  </div>
+
+  <!-- ══ PACKAGES ══ -->
+  <div class="s-packages">
+    <div class="sec-label">
+      <div class="sec-line"></div>
+      <div class="sec-lbl-txt">Sponsorship Packages</div>
+    </div>
+    <div class="sec-title">اختر <em>مستوى رعايتك</em></div>
+    <div class="pkg-row">
+
+      <!-- Strategic -->
+      <div class="pkg-card pkg-strat">
+        <div class="pkg-head">
+          <div class="pkg-type">Strategic Sponsor — Exclusive</div>
+          <div class="pkg-name">الراعي الاستراتيجي</div>
+          <div class="pkg-en">Top-tier, limited slots</div>
+          <div class="pkg-price">
+            <span class="pp-badge">EXCLUSIVE</span>
+            <span class="pp-num">12,000</span>
+            <span class="pp-cur">SAR</span>
+          </div>
+        </div>
+        <div class="pkg-body">
+          <div class="prow"><div class="prow-chk">✓</div><div><div class="prow-txt">لقب الراعي الاستراتيجي في كل إعلان</div></div></div>
+          <div class="prow"><div class="prow-chk">✓</div><div><div class="prow-txt">جناح رئيسي قرب المسرح + كلمة افتتاحية</div></div></div>
+          <div class="prow"><div class="prow-chk">✓</div><div><div class="prow-txt">Branding كامل + Panel رئيسي + VIP</div></div></div>
+          <div class="prow"><div class="prow-chk">✓</div><div><div class="prow-txt">تقرير إحصائي + درع فاخر + فيديو رسمي</div></div></div>
+        </div>
+      </div>
+
+      <!-- Gold -->
+      <div class="pkg-card pkg-gold">
+        <div class="pkg-head">
+          <div class="pkg-type">Gold Sponsor — Limited</div>
+          <div class="pkg-name">الراعي الذهبي</div>
+          <div class="pkg-en">High visibility, limited slots</div>
+          <div class="pkg-price">
+            <span class="pp-badge">LIMITED</span>
+            <span class="pp-num">6,000</span>
+            <span class="pp-cur">SAR</span>
+          </div>
+        </div>
+        <div class="pkg-body">
+          <div class="prow"><div class="prow-chk">✓</div><div><div class="prow-txt">لقب الراعي الذهبي في كل المواد</div></div></div>
+          <div class="prow"><div class="prow-chk">✓</div><div><div class="prow-txt">جناح استراتيجي + الأركان الخمسة</div></div></div>
+          <div class="prow"><div class="prow-chk">✓</div><div><div class="prow-txt">شعار على جميع المواد التسويقية</div></div></div>
+          <div class="prow"><div class="prow-chk">✓</div><div><div class="prow-txt">مواد دعائية + درع تكريمي + VIP</div></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ LOWER (BOOTH + PARTNERS) ══ -->
+  <div class="s-lower">
+
+    <!-- Booth Options -->
+    <div class="booth-box">
+      <div class="bb-title">🏪 خيارات البوث</div>
+      <div class="bb-row">
+        <div class="bb-num">1</div>
+        <div>
+          <div class="bb-name">بوثك الخاص</div>
+          <div class="bb-desc">أحضر هويتك · مساحة + كهرباء + إنترنت + دعم لوجستي</div>
+        </div>
+      </div>
+      <div class="bb-row">
+        <div class="bb-num">2</div>
+        <div>
+          <div class="bb-name">بوث مجهز بالكامل</div>
+          <div class="bb-desc">شاشة 55" · طاولة · كراسي · LED · بدون أي جهد</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partners -->
+    <div class="partners-box">
+      <div class="pb-title">🌐 أبرز المشاركين</div>
+      <div class="pb-grid">
+        <div class="pb-chip chip-g"><div class="pb-dot"></div>SAMA</div>
+        <div class="pb-chip chip-b"><div class="pb-dot"></div>SDAIA</div>
+        <div class="pb-chip chip-g"><div class="pb-dot"></div>Fintech Saudi</div>
+        <div class="pb-chip chip-b"><div class="pb-dot"></div>وزارة الاستثمار</div>
+        <div class="pb-chip chip-p"><div class="pb-dot"></div>STC Bank</div>
+        <div class="pb-chip chip-y"><div class="pb-dot"></div>EY</div>
+        <div class="pb-chip chip-o"><div class="pb-dot"></div>تمارا</div>
+        <div class="pb-chip chip-b"><div class="pb-dot"></div>PwC</div>
+        <div class="pb-chip chip-b"><div class="pb-dot"></div>بنك الرياض</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══ CONTACT ══ -->
+  <div class="s-contact">
+    <div class="sc-left">
+      <div class="sc-tagline">Join the Exhibition</div>
+      <div class="sc-cta">انضم إلى<br><em>روافد فنتك 2026</em></div>
+    </div>
+    <div class="sc-right">
+      <div class="contact-item">
+        <div class="ci-icon">📧</div>
+        <div class="ci-txt">pr.technationclub@gmail.com</div>
+      </div>
+      <div class="contact-item">
+        <div class="ci-icon">📱</div>
+        <div class="ci-txt">+966 53 483 1944</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="s-footer">
+    <div class="f-logo">معرض روافد فنتك 2026</div>
+    <div class="f-date"><div class="f-date-dot"></div><div class="f-date-txt">5 – 6 مايو 2026</div></div>
+    <div class="f-copy">جامعة الإمام محمد بن سعود الإسلامية</div>
+  </div>
+
+</div><!-- /poster -->
+</div><!-- /wrapper -->
+
+<script>
+function scale() {
+  const poster  = document.getElementById('poster');
+  const wrapper = document.getElementById('wrapper');
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  const PW = 1080, PH = 1350;
+  const fitFull = new URLSearchParams(location.search).get('full') === '1';
+  const s = fitFull
+    ? Math.min(vw / PW, vh / PH)          // يحشر الكل في الشاشة دفعة واحدة
+    : Math.min(vw / PW, 1);               // عرض كامل + تمرير عمودي
+  poster.style.transform = `scale(${s})`;
+  poster.style.transformOrigin = 'top center';
+  wrapper.style.height = (PH * s) + 'px';
+}
+scale();
+window.addEventListener('resize', scale);
+</script>
+</body>
+</html>

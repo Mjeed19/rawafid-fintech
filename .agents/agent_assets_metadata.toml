@@ -36,3 +36,9 @@ id = "FgPjKLXf1GGKHadTT6E5A"
 uri = "file://rawafid_fintech_2026.pdf"
 type = "pdf"
 title = "معرض روافد فنتك 2026 — PDF"
+
+[[outputs]]
+id = "db7sAxWgS0QXZK_RfEX8F"
+uri = "file://screenshots/poster_ig.jpg"
+type = "image"
+title = "Rawafid Fintech 2026 — Instagram Poster (1080×1350)"
