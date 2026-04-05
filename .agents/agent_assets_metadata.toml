@@ -20,28 +20,10 @@ type = "image"
 title = "بوستر واتساب — معرض روافد فنتك 2026"
 
 [[outputs]]
-id = "hXgfJBBsNsDJSFpFP8Qqt"
-uri = "file://screenshots/poster_canva.png"
-type = "image"
-title = "بوستر PNG — جاهز للرفع على كانفا"
-
-[[outputs]]
 id = "Jn-Kz7wT-7Vht4K-Q3GYA"
 uri = "file://screenshots/poster_canva.jpg"
 type = "image"
 title = "بوستر JPG — واتساب وسوشيال ميديا"
-
-[[outputs]]
-id = "FgPjKLXf1GGKHadTT6E5A"
-uri = "file://rawafid_fintech_2026.pdf"
-type = "pdf"
-title = "معرض روافد فنتك 2026 — PDF"
-
-[[outputs]]
-id = "db7sAxWgS0QXZK_RfEX8F"
-uri = "file://screenshots/poster_ig.jpg"
-type = "image"
-title = "Rawafid Fintech 2026 — Instagram Poster (1080×1350)"
 
 [[outputs]]
 id = "9zifbaw3g7oQFCIBH47xq"

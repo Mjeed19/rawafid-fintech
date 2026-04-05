@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050E08">
+<title>معرض روافد فنتك 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --g4:#050E08;--g3:#0D3328;--g2:#145442;--g1:#1B6B52;
+  --gm:#2A8A6A;--glt:#3DAA86;--gold:#C49838;
+}
+html{scroll-behavior:smooth;background:var(--g4)}
+body{font-family:'Tajawal',sans-serif;background:var(--g4);color:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* ─── NAV ─── */
+nav{position:sticky;top:0;z-index:99;display:flex;align-items:center;justify-content:space-between;padding:12px clamp(16px,4vw,48px);background:rgba(5,14,8,.95);backdrop-filter:blur(18px);border-bottom:1px solid rgba(61,170,134,.1)}
+.n-brand{font-family:'Cairo',sans-serif;font-size:1rem;font-weight:900;color:#fff}
+.n-brand span{color:var(--glt)}
+.n-links{display:flex;gap:18px;list-style:none}
+.n-links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.78rem;font-weight:500;transition:color .2s}
+.n-links a:hover{color:#fff}
+.n-cta{background:var(--g1)!important;color:#fff!important;padding:6px 14px;border-radius:6px;border:1px solid var(--glt)!important;font-weight:700!important}
+@media(max-width:600px){.n-links{display:none}}
+
+/* ─── HERO ─── */
+.hero{min-height:92svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px clamp(16px,4vw,48px) 60px;position:relative;overflow:hidden}
+.h-bg{position:absolute;inset:0;background:radial-gradient(ellipse 130% 65% at 50% -5%,rgba(27,107,82,.55) 0%,transparent 55%),radial-gradient(ellipse 55% 55% at 5% 95%,rgba(42,138,106,.12) 0%,transparent 50%)}
+.h-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(61,170,134,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(61,170,134,.05) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 85% 85% at 50% 40%,black 25%,transparent 72%);animation:gm 20s linear infinite}
+@keyframes gm{to{background-position:56px 56px}}
+.h-glow{position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(61,170,134,.6) 50%,transparent)}
+.h-content{position:relative;z-index:2;max-width:660px}
+.h-pill{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(61,170,134,.28);background:rgba(61,170,134,.07);color:var(--glt);font-size:.65rem;font-weight:700;padding:4px 13px;border-radius:100px;margin-bottom:16px;letter-spacing:2px;text-transform:uppercase}
+.dot{width:5px;height:5px;background:var(--glt);border-radius:50%;animation:bl 1.5s infinite}
+@keyframes bl{0%,100%{opacity:1}50%{opacity:.15}}
+h1{font-family:'Cairo',sans-serif;font-size:clamp(2.8rem,7vw,6rem);font-weight:900;line-height:1.1;letter-spacing:-1px;margin-bottom:6px}
+h1 .sub{display:block;font-size:.36em;font-weight:800;color:rgba(255,255,255,.7);letter-spacing:1px;margin-bottom:2px}
+h1 .gr{background:linear-gradient(135deg,var(--glt),#8FFFDA 50%,var(--glt));background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:sh 4s ease infinite}
+@keyframes sh{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+.h-sub{font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:24px;line-height:1.7}
+.h-sub strong{color:rgba(255,255,255,.9);font-weight:700}
+.info-row{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.ir{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:8px 14px;text-align:center;min-width:110px}
+.ir-v{font-family:'Cairo',sans-serif;font-size:.88rem;font-weight:900;line-height:1}
+.ir-l{font-size:.55rem;color:rgba(255,255,255,.38);margin-top:2px}
+.h-btns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.btn-p{background:var(--g1);color:#fff;padding:11px 24px;border:1px solid var(--glt);border-radius:7px;font-family:'Tajawal',sans-serif;font-size:.85rem;font-weight:800;cursor:pointer;transition:all .3s;text-decoration:none;box-shadow:0 4px 18px rgba(27,107,82,.35)}
+.btn-p:hover{background:var(--gm);transform:translateY(-2px)}
+.btn-s{background:rgba(255,255,255,.07);color:#fff;padding:11px 20px;border:1px solid rgba(255,255,255,.15);border-radius:7px;font-family:'Tajawal',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer;transition:all .3s;text-decoration:none}
+.btn-s:hover{background:rgba(255,255,255,.12)}
+.scroll-hint{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:1px;height:28px;background:linear-gradient(to bottom,rgba(61,170,134,.6),transparent);animation:sl 2s ease-in-out infinite}
+@keyframes sl{0%{opacity:0;transform:translateX(-50%) scaleY(0);transform-origin:top}50%{opacity:1;transform:translateX(-50%) scaleY(1)}100%{opacity:0;transform:translateX(-50%) scaleY(1);transform-origin:bottom}}
+
+/* ─── STATS BAR ─── */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(--g1);border-bottom:2px solid var(--g2)}
+.st{padding:16px 10px;text-align:center;border-left:1px solid rgba(255,255,255,.08)}
+.st:last-child{border-left:none}
+.st-n{font-family:'Cairo',sans-serif;font-size:1.5rem;font-weight:900;color:#fff;line-height:1}
+.st-l{font-size:.6rem;color:rgba(255,255,255,.5);margin-top:4px}
+@media(max-width:520px){.stats{grid-template-columns:1fr 1fr}.st{padding:13px 8px}.st-n{font-size:1.2rem}}
+
+/* ─── SECTIONS ─── */
+.sec{padding:56px clamp(16px,4vw,48px);max-width:1180px;margin:0 auto}
+.sec-full{background:var(--g4)}.sec-alt{background:rgba(13,51,40,.4)}
+.lbl{display:inline-flex;align-items:center;gap:6px;color:var(--glt);font-size:.62rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}
+.lbl::before{content:'';width:10px;height:2px;background:var(--glt)}
+h2{font-family:'Cairo',sans-serif;font-size:clamp(1.5rem,2.5vw,2.1rem);font-weight:900;line-height:1.15;color:#fff}
+h2 em{color:var(--glt);font-style:normal}
+.sec-sub{color:rgba(255,255,255,.45);font-size:.8rem;margin-top:5px}
+
+/* ─── PACKAGES (compact 2-col) ─── */
+.pkg-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.pkg{border-radius:12px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.pkg:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.25)}
+.pkg-h{padding:18px 20px}
+.pkg-title{font-family:'Cairo',sans-serif;font-size:1rem;font-weight:900;color:#fff}
+.pkg-sub{font-size:.62rem;color:rgba(255,255,255,.65);margin-top:1px}
+.pkg-price{font-family:'Cairo',sans-serif;font-size:1.5rem;font-weight:900;color:#fff;margin-top:8px;direction:ltr;display:inline-block}
+.pkg-price small{font-size:.6rem;opacity:.7;font-weight:600}
+.pkg-badge{display:inline-block;font-size:.52rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:100px;background:rgba(255,255,255,.2);color:#fff;margin-right:6px;vertical-align:middle}
+.pkg-b{background:rgba(255,255,255,.04);padding:14px 20px;display:flex;flex-direction:column;gap:5px}
+.pkg-item{font-size:.75rem;color:rgba(255,255,255,.78);display:flex;align-items:flex-start;gap:7px}
+.pkg-item::before{content:'✓';color:var(--glt);font-weight:900;flex-shrink:0;margin-top:1px}
+.pkg.strat .pkg-h{background:linear-gradient(135deg,#8B6520,#C49838)}
+.pkg.gold .pkg-h{background:linear-gradient(135deg,#6B4A10,#A07828)}
+.pkg.inkind .pkg-h{background:linear-gradient(135deg,#0A4F40,#0D7D6C)}
+.pkg.exhb .pkg-h{background:linear-gradient(135deg,#0D3328,#1B6B52)}
+@media(max-width:640px){.pkg-grid{grid-template-columns:1fr}}
+
+/* ─── BOOTH ─── */
+.booth-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.bc{background:rgba(255,255,255,.04);border:1px solid rgba(61,170,134,.15);border-radius:12px;padding:20px;backdrop-filter:blur(8px);transition:border-color .2s}
+.bc.feat{border-color:rgba(61,170,134,.35);background:rgba(61,170,134,.05)}
+.bc:hover{border-color:rgba(61,170,134,.4)}
+.bc-top{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.bc-ic{font-size:1.5rem}
+.bc-name{font-family:'Cairo',sans-serif;font-size:.9rem;font-weight:800;color:#fff}
+.bc-en{font-size:.58rem;color:rgba(255,255,255,.3);letter-spacing:.5px}
+.bc-list{list-style:none;display:flex;flex-direction:column;gap:5px}
+.bc-list li{font-size:.75rem;color:rgba(255,255,255,.65);display:flex;gap:7px}
+.bc-list li::before{content:'•';color:var(--glt);flex-shrink:0}
+.bc-btn{display:flex;align-items:center;justify-content:center;gap:7px;background:#25D366;color:#fff;padding:9px 16px;border-radius:7px;font-family:'Tajawal',sans-serif;font-size:.8rem;font-weight:800;text-decoration:none;margin-top:14px;transition:background .2s}
+.bc-btn:hover{background:#1ebe5a}
+@media(max-width:560px){.booth-grid{grid-template-columns:1fr}}
+
+/* ─── PARTNERS ─── */
+.partners-wrap{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px}
+.pchip{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.05);border:1px solid rgba(61,170,134,.16);border-radius:9px;padding:8px 13px;transition:all .2s;backdrop-filter:blur(6px)}
+.pchip:hover{background:rgba(61,170,134,.08);border-color:rgba(61,170,134,.3)}
+.pdot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.pname{font-family:'Cairo',sans-serif;font-size:.82rem;font-weight:800;color:#fff}
+
+/* ─── CONTACT ─── */
+.ct-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:28px;align-items:start}
+.ct-info h3{font-family:'Cairo',sans-serif;font-size:1.1rem;font-weight:900;color:#fff;margin-bottom:6px}
+.ct-info p{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:18px}
+.ccard{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:11px 14px;margin-bottom:8px;transition:background .2s}
+.ccard:hover{background:rgba(255,255,255,.11)}
+.cc-ic{width:34px;height:34px;background:rgba(61,170,134,.18);border:1px solid rgba(61,170,134,.3);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+.cc-lbl{font-size:.6rem;color:rgba(255,255,255,.45)}
+.cc-val{font-size:.82rem;font-weight:700;color:#fff}
+.cc-val a{color:var(--glt);text-decoration:none}
+.form-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px;backdrop-filter:blur(8px)}
+.form-ttl{font-family:'Cairo',sans-serif;font-size:.9rem;font-weight:900;color:#fff;margin-bottom:16px}
+.fg{margin-bottom:10px}
+.fg label{display:block;font-size:.65rem;color:rgba(255,255,255,.35);margin-bottom:3px;font-weight:600}
+.fg input,.fg select,.fg textarea{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.11);border-radius:7px;padding:9px 11px;color:#fff;font-family:'Tajawal',sans-serif;font-size:.85rem;outline:none;transition:all .3s;direction:rtl}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--glt);background:rgba(255,255,255,.1)}
+.fg select option{background:#0D3328;color:#fff}
+.fg textarea{resize:vertical;min-height:60px}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.18)}
+.form-btn{width:100%;background:var(--g1);color:#fff;border:1px solid var(--glt);border-radius:8px;padding:11px;font-family:'Tajawal',sans-serif;font-size:.88rem;font-weight:800;cursor:pointer;transition:all .3s}
+.form-btn:hover{background:var(--gm);transform:translateY(-1px)}
+@media(max-width:640px){.ct-wrap{grid-template-columns:1fr;gap:24px}}
+
+/* ─── THANK YOU ─── */
+#ty{display:none;position:fixed;inset:0;z-index:900;background:rgba(5,14,8,.92);backdrop-filter:blur(12px);align-items:center;justify-content:center;padding:24px}
+#ty>div{background:var(--g3);border:1px solid rgba(61,170,134,.2);border-radius:16px;max-width:420px;width:100%;padding:36px 28px;text-align:center;position:relative}
+#ty-close{position:absolute;top:12px;left:14px;background:none;border:none;color:rgba(255,255,255,.4);font-size:1.1rem;cursor:pointer}
+#ty h3{font-family:'Cairo',sans-serif;font-size:1.3rem;font-weight:900;color:#fff;margin-bottom:8px}
+#ty p{font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.7}
+
+/* ─── FOOTER ─── */
+footer{background:var(--g4);border-top:1px solid rgba(61,170,134,.08);padding:18px clamp(16px,4vw,48px)}
+.fi{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.fb{font-family:'Cairo',sans-serif;font-size:.82rem;font-weight:900;color:rgba(255,255,255,.55)}
+.fb small{display:block;font-size:.58rem;color:rgba(255,255,255,.2);margin-top:1px}
+.fc{font-size:.62rem;color:rgba(255,255,255,.2)}
+
+/* ─── WA FLOAT ─── */
+.wa-fab{position:fixed;bottom:18px;left:18px;z-index:600;width:48px;height:48px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(37,211,102,.4);transition:all .3s;text-decoration:none}
+.wa-fab:hover{transform:scale(1.1)}
+.wa-fab svg{width:22px;height:22px;fill:#fff}
+
+/* ─── DIVIDER ─── */
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(61,170,134,.18) 50%,transparent);margin:0 clamp(16px,4vw,48px)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="n-brand">معرض <span>روافد فنتك</span></div>
+  <ul class="n-links">
+    <li><a href="#packages">الباقات</a></li>
+    <li><a href="#booth">البوث</a></li>
+    <li><a href="#contact">تواصل</a></li>
+    <li><a href="#contact" class="n-cta">احجز اجتماعاً</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="h-bg"></div>
+  <div class="h-grid"></div>
+  <div class="h-glow"></div>
+  <div class="h-content">
+    <div class="h-pill"><span class="dot"></span>فرصة رعاية · 2026</div>
+    <h1>
+      <span class="sub">معرض</span>
+      <span class="gr">روافد فنتك</span>
+    </h1>
+    <p class="h-sub">
+      <strong>أكبر معرض فنتك أكاديمي بالمملكة العربية السعودية</strong><br>
+      برعاية جامعة الإمام محمد بن سعود الإسلامية · كلية علوم الحاسب والأعمال
+    </p>
+    <div class="info-row">
+      <div class="ir"><div class="ir-v">5–6 مايو 2026</div><div class="ir-l">التاريخ</div></div>
+      <div class="ir"><div class="ir-v">8:30 – 12:00</div><div class="ir-l">الوقت</div></div>
+      <div class="ir"><div class="ir-v">بهو جامعة الإمام</div><div class="ir-l">الرياض</div></div>
+    </div>
+    <div class="h-btns">
+      <a href="#packages" class="btn-p">باقات الرعاية</a>
+      <a href="#contact" class="btn-s">احجز اجتماع الرعاية</a>
+    </div>
+  </div>
+  <div class="scroll-hint"></div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="st"><div class="st-n">+3000</div><div class="st-l">زائر متوقع</div></div>
+  <div class="st"><div class="st-n">يومان</div><div class="st-l">تواجد كامل</div></div>
+  <div class="st"><div class="st-n">+20</div><div class="st-l">جهة مشاركة</div></div>
+  <div class="st"><div class="st-n">5</div><div class="st-l">أركان رئيسية</div></div>
+</div>
+
+<!-- PACKAGES -->
+<div style="background:rgba(9,26,20,.5)">
+<div class="sec" id="packages">
+  <div class="lbl">باقات الرعاية</div>
+  <h2>اختر مستوى <em>شراكتك</em></h2>
+  <p class="sec-sub">باقات مصممة لتعظيم أثرك قبل الفعالية وخلالها وبعدها</p>
+  <div class="pkg-grid">
+
+    <!-- STRATEGIC -->
+    <div class="pkg strat">
+      <div class="pkg-h">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px">
+          <div>
+            <div class="pkg-title">الراعي الاستراتيجي</div>
+            <div class="pkg-sub">Strategic Sponsor · حصري</div>
+          </div>
+          <span class="pkg-badge">EXCLUSIVE</span>
+        </div>
+        <div class="pkg-price">12,000 <small>ريال</small></div>
+      </div>
+      <div class="pkg-b">
+        <div class="pkg-item">جناح رئيسي قرب المسرح + كلمة افتتاحية</div>
+        <div class="pkg-item">Branding كامل على المسرح + Panel + VIP</div>
+        <div class="pkg-item">تقرير إحصائي + درع فاخر + فيديو رسمي</div>
+        <div class="pkg-item">لقب الراعي الاستراتيجي في كل إعلان</div>
+        <div class="pkg-item">ختم رسمي تستخدمه في قنواتك</div>
+      </div>
+    </div>
+
+    <!-- GOLD -->
+    <div class="pkg gold">
+      <div class="pkg-h">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px">
+          <div>
+            <div class="pkg-title">الراعي الذهبي</div>
+            <div class="pkg-sub">Gold Sponsor · محدود</div>
+          </div>
+          <span class="pkg-badge">LIMITED</span>
+        </div>
+        <div class="pkg-price">6,000 <small>ريال</small></div>
+      </div>
+      <div class="pkg-b">
+        <div class="pkg-item">جناح استراتيجي + الأركان الخمسة</div>
+        <div class="pkg-item">شعار على جميع المواد التسويقية</div>
+        <div class="pkg-item">مواد دعائية + درع تكريمي + VIP</div>
+        <div class="pkg-item">لقب الراعي الذهبي في كل إعلان</div>
+      </div>
+    </div>
+
+    <!-- IN-KIND -->
+    <div class="pkg inkind">
+      <div class="pkg-h">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px">
+          <div>
+            <div class="pkg-title">شركاء النجاح</div>
+            <div class="pkg-sub">In-Kind Partners · بدون مقابل مالي</div>
+          </div>
+          <span class="pkg-badge">OPEN</span>
+        </div>
+        <div class="pkg-price" style="font-size:1.1rem;margin-top:10px">عيني</div>
+      </div>
+      <div class="pkg-b">
+        <div class="pkg-item">شريك أكاديمي · مطبوعات · ضيافة</div>
+        <div class="pkg-item">شريك إعلامي · تشغيلي · هدايا</div>
+        <div class="pkg-item">شعار + ذكر رسمي + حضور إعلامي</div>
+        <div class="pkg-item">بدون تكلفة مالية — دعم عيني فقط</div>
+      </div>
+    </div>
+
+    <!-- EXHIBITORS -->
+    <div class="pkg exhb">
+      <div class="pkg-h">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px">
+          <div>
+            <div class="pkg-title">المشاركون في المعرض</div>
+            <div class="pkg-sub">Exhibitors · بوث مجهّز</div>
+          </div>
+          <span class="pkg-badge">FREE</span>
+        </div>
+        <div class="pkg-price" style="font-size:1.1rem;margin-top:10px">مجاني</div>
+      </div>
+      <div class="pkg-b">
+        <div class="pkg-item">بوث مجهّز بالكامل (طاولة، كراسي، LED)</div>
+        <div class="pkg-item">شعار في مواد المعرض الدعائية</div>
+        <div class="pkg-item">إعلان على الموقع + إشارة في التواصل</div>
+        <div class="pkg-item">المطلوب: محتوى + موظفون فقط</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- BOOTH OPTIONS -->
+<div style="background:var(--g4)">
+<div class="sec" id="booth">
+  <div class="lbl">خيارات البوث</div>
+  <h2>اختر طريقة <em>تواجدك</em></h2>
+  <div class="booth-grid">
+    <div class="bc feat">
+      <div class="bc-top">
+        <span class="bc-ic">⚖️</span>
+        <div><div class="bc-name">البوث الخاص</div><div class="bc-en">BRING YOUR OWN BOOTH</div></div>
+      </div>
+      <ul class="bc-list">
+        <li>أحضر بوثك · مساحة + كهرباء + إنترنت</li>
+        <li>دعم لوجستي كامل من الفريق</li>
+        <li>أقصى حرية في التصميم والهوية</li>
+      </ul>
+      <a href="https://wa.me/966534831944?text=أود%20الاستفسار%20عن%20البوث%20الخاص" target="_blank" class="bc-btn">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        تواصل معنا
+      </a>
+    </div>
+    <div class="bc">
+      <div class="bc-top">
+        <span class="bc-ic">📦</span>
+        <div><div class="bc-name">بوث مجهّز بالكامل</div><div class="bc-en">TURNKEY BOOTH</div></div>
+      </div>
+      <ul class="bc-list">
+        <li>شاشة 55" · طاولة · كراسي · LED</li>
+        <li>بدون أي جهد تحضيري</li>
+        <li>متاح للرعاة والمشاركين</li>
+      </ul>
+      <a href="https://wa.me/966534831944?text=أود%20الاستفسار%20عن%20بوث%20مجهز" target="_blank" class="bc-btn">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        تواصل معنا
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- PARTNERS -->
+<div style="background:rgba(9,26,20,.4)">
+<div class="sec" id="orgs">
+  <div class="lbl">أبرز المشاركين</div>
+  <h2>جهات <em>موثوقة</em> بجانبك</h2>
+  <div class="partners-wrap">
+    <div class="pchip"><span class="pdot" style="background:#00B4D8"></span><span class="pname">STC Bank</span></div>
+    <div class="pchip"><span class="pdot" style="background:#1B4F72"></span><span class="pname">وزارة الاستثمار</span></div>
+    <div class="pchip"><span class="pdot" style="background:#2E86AB"></span><span class="pname">Fintech Saudi</span></div>
+    <div class="pchip"><span class="pdot" style="background:#A23B72"></span><span class="pname">SDAIA</span></div>
+    <div class="pchip"><span class="pdot" style="background:#006400"></span><span class="pname">SAMA</span></div>
+    <div class="pchip"><span class="pdot" style="background:#C0392B"></span><span class="pname">بنك الرياض</span></div>
+    <div class="pchip"><span class="pdot" style="background:#2C3E50"></span><span class="pname">PwC</span></div>
+    <div class="pchip"><span class="pdot" style="background:#117A65"></span><span class="pname">ثمار</span></div>
+    <div class="pchip"><span class="pdot" style="background:#7D3C98"></span><span class="pname">EY</span></div>
+  </div>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<div style="background:var(--g4)">
+<div class="sec" id="contact">
+  <div class="lbl">تواصل معنا</div>
+  <h2>انضم إلى <em>روافد فنتك 2026</em></h2>
+  <div class="ct-wrap">
+    <div class="ct-info">
+      <h3>نحن هنا لمساعدتك</h3>
+      <p>30 دقيقة نشرح فيها الباقات ونجيب على أسئلتك. تواصل معنا مباشرة.</p>
+      <div class="ccard">
+        <div class="cc-ic">✉️</div>
+        <div><div class="cc-lbl">البريد الإلكتروني</div><div class="cc-val"><a href="mailto:pr.technationclub@gmail.com">pr.technationclub@gmail.com</a></div></div>
+      </div>
+      <div class="ccard">
+        <div class="cc-ic">📱</div>
+        <div><div class="cc-lbl">واتساب / هاتف</div><div class="cc-val">+966 53 483 1944</div></div>
+      </div>
+      <div style="margin-top:16px">
+        <a href="https://wa.me/966534831944?text=أود%20الاستفسار%20عن%20رعاية%20معرض%20روافد%20فنتك%202026" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;padding:12px 22px;border-radius:8px;font-family:'Tajawal',sans-serif;font-size:.88rem;font-weight:800;text-decoration:none;transition:background .2s">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          تواصل عبر واتساب
+        </a>
+      </div>
+    </div>
+    <div class="form-box">
+      <div class="form-ttl">احجز اجتماع الرعاية</div>
+      <form id="ctform">
+        <div class="fg"><label>الاسم</label><input type="text" placeholder="اسمك الكريم" required></div>
+        <div class="fg"><label>المؤسسة</label><input type="text" placeholder="اسم الشركة / المؤسسة" required></div>
+        <div class="fg"><label>البريد</label><input type="email" placeholder="email@example.com" required></div>
+        <div class="fg">
+          <label>الباقة المناسبة</label>
+          <select>
+            <option value="">اختر الباقة</option>
+            <option>الراعي الاستراتيجي — 12,000 ريال</option>
+            <option>الراعي الذهبي — 6,000 ريال</option>
+            <option>شريك عيني</option>
+            <option>مشارك في المعرض</option>
+          </select>
+        </div>
+        <div class="fg"><label>ملاحظات</label><textarea placeholder="أي استفسارات أو متطلبات خاصة..."></textarea></div>
+        <button type="submit" class="form-btn">إرسال الطلب</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fi">
+    <div class="fb">معرض روافد فنتك<small>جامعة الإمام محمد بن سعود الإسلامية · الرياض</small></div>
+    <div class="fc">5 – 6 مايو 2026</div>
+    <div class="fc">© 2026 Tech Nation Club</div>
+  </div>
+</footer>
+
+<!-- WA FAB -->
+<a class="wa-fab" href="https://wa.me/966534831944" target="_blank">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- TY OVERLAY -->
+<div id="ty">
+  <div>
+    <button id="ty-close" onclick="document.getElementById('ty').style.display='none'">✕</button>
+    <div style="font-size:2.5rem;margin-bottom:12px">✅</div>
+    <h3>تم الإرسال بنجاح!</h3>
+    <p>شكراً لاهتمامك برعاية معرض روافد فنتك 2026.<br>سنتواصل معك خلال 24 ساعة.</p>
+  </div>
+</div>
+
+<script>
+document.getElementById('ctform').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const ty = document.getElementById('ty');
+  ty.style.display = 'flex';
+  this.reset();
+});
+document.getElementById('ty').addEventListener('click', function(e) {
+  if (e.target === this) this.style.display = 'none';
+});
+</script>
+</body>
+</html>
