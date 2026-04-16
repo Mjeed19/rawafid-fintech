@@ -212,6 +212,14 @@ nav{
 .pkg2-item-main{font-size:.85rem;font-weight:700;color:var(--ink);font-family:'Cairo',sans-serif;line-height:1.3}
 .pkg2-item-desc{font-size:.71rem;color:var(--muted);line-height:1.4;margin-top:1px}
 .pkg2-footer{padding:12px 26px 18px}
+/* Collapsible cards */
+.pkg2-header{cursor:pointer;user-select:none}
+.pkg2-header::after{content:'';display:block;width:22px;height:22px;margin:10px auto 0;background:rgba(255,255,255,.25);border-radius:50%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-size:14px;background-repeat:no-repeat;background-position:center;transition:transform .35s ease}
+.pkg2.expanded .pkg2-header::after{transform:rotate(180deg)}
+.pkg2-collapse{overflow:hidden;max-height:0;transition:max-height .45s cubic-bezier(.4,0,.2,1),opacity .35s ease;opacity:0}
+.pkg2.expanded .pkg2-collapse{max-height:3500px;opacity:1}
+.pkg2-hint{text-align:center;font-size:.72rem;color:rgba(255,255,255,.65);margin-top:6px;transition:opacity .2s}
+.pkg2.expanded .pkg2-hint{opacity:0;height:0;overflow:hidden;margin:0}
 .pkg2-tagline{font-size:.8rem;font-weight:600;text-align:center;padding:11px 14px;border-radius:8px;border:1.5px dashed;line-height:1.55}
 .pkg2.official .pkg2-header{background:linear-gradient(135deg,#0F1F5C,#1E3A8A)}
 .pkg2.official .pkg2-check{background:#2563EB}.pkg2.official .pkg2-divider{background:linear-gradient(90deg,#2563EB,transparent)}
@@ -1058,6 +1066,32 @@ html,body{background-color:var(--green4)!important;overscroll-behavior:none;min-
     e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible')});
   },{threshold:.05,rootMargin:'0px 0px -10px 0px'});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+  // Collapsible package cards
+  document.querySelectorAll('.pkg2').forEach(function(card){
+    var header = card.querySelector('.pkg2-header');
+    var body   = card.querySelector('.pkg2-body');
+    var footer = card.querySelector('.pkg2-footer');
+    if(!header || !body) return;
+    // Wrap body + footer in collapse wrapper
+    var wrap = document.createElement('div');
+    wrap.className = 'pkg2-collapse';
+    card.insertBefore(wrap, body);
+    wrap.appendChild(body);
+    if(footer) wrap.appendChild(footer);
+    // Add hint text inside header
+    var hint = document.createElement('div');
+    hint.className = 'pkg2-hint';
+    hint.textContent = 'اضغط لعرض المميزات';
+    header.appendChild(hint);
+    // Toggle on click
+    header.addEventListener('click', function(){
+      var isOpen = card.classList.contains('expanded');
+      // Close all other cards first
+      document.querySelectorAll('.pkg2.expanded').forEach(function(c){ c.classList.remove('expanded'); });
+      if(!isOpen) card.classList.add('expanded');
+    });
+  });
 
   // Fallback: make all reveals visible after hash navigation or after short delay
   function revealAll(){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible')});}
