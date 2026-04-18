@@ -221,6 +221,10 @@ nav{
 .pkg2-hint{text-align:center;font-size:.72rem;color:rgba(255,255,255,.65);margin-top:6px;transition:opacity .2s}
 .pkg2.expanded .pkg2-hint{opacity:0;height:0;overflow:hidden;margin:0}
 .pkg2-tagline{font-size:.8rem;font-weight:600;text-align:center;padding:11px 14px;border-radius:8px;border:1.5px dashed;line-height:1.55}
+.pkg2-sold-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(220,38,38,.88);color:#fff;font-size:.65rem;font-weight:900;padding:4px 11px;border-radius:20px;letter-spacing:.3px;margin-bottom:7px;box-shadow:0 2px 8px rgba(220,38,38,.4)}
+.pkg2-sold-badge::before{content:'';width:7px;height:7px;background:#fff;border-radius:50%;opacity:.8}
+.pkg2.sold-out .pkg2-header{position:relative}
+.pkg2.sold-out .pkg2-price-box{opacity:.55}
 .pkg2.official .pkg2-header{background:linear-gradient(135deg,#0F1F5C,#1E3A8A)}
 .pkg2.official .pkg2-check{background:#2563EB}.pkg2.official .pkg2-divider{background:linear-gradient(90deg,#2563EB,transparent)}
 .pkg2.official .pkg2-footer{background:#EFF4FF}.pkg2.official .pkg2-tagline{color:#0A1540;border-color:rgba(37,99,235,.4);background:rgba(37,99,235,.06)}
@@ -609,10 +613,11 @@ html,body{background-color:var(--green4)!important;overscroll-behavior:none;min-
       </div>
 
       <!-- STRATEGIC -->
-      <div class="pkg2 strat">
+      <div class="pkg2 strat sold-out">
         <div class="pkg2-header">
           <div class="pkg2-top">
             <div>
+              <div class="pkg2-sold-badge">اكتمل العدد</div>
               <div class="pkg2-name">الراعي الاستراتيجي</div>
               <div class="pkg2-sub">بعدد ٤ رعاة استراتيجيين</div>
             </div>
