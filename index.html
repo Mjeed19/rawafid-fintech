@@ -11,7 +11,7 @@
 :root{
   --bg:#EEF2EF;--bg2:#E3E9E5;--surf:#fff;--card:#F4F8F5;
   --green:#1B6B52;--green2:#145442;--green3:#0D3328;--green4:#050E08;
-  --gm:#2A8A6A;--glt:#3DAA86;
+  --gm:#2A8A6A;--glt:#3DE89A;--glt2:#4DD8B8;--cyan:#1FB8C9;
   --gold:#B8913A;--gold2:#D4A84B;
   --teal:#0D7D6C;--teal2:#0A6459;
   --ink:#0C1E15;--ink2:#2B4838;--muted:#667A6E;
@@ -51,9 +51,10 @@ nav{
   background:var(--green4);
 }
 .h-mesh{position:absolute;inset:0;z-index:0;background:
-  radial-gradient(ellipse 130% 70% at 50% -5%,rgba(27,107,82,.52) 0%,transparent 55%),
-  radial-gradient(ellipse 55% 55% at 5% 95%,rgba(42,138,106,.14) 0%,transparent 50%),
-  radial-gradient(ellipse 55% 55% at 95% 85%,rgba(13,51,40,.8) 0%,transparent 50%)}
+  radial-gradient(ellipse 130% 70% at 50% -5%,rgba(27,107,82,.55) 0%,transparent 55%),
+  radial-gradient(ellipse 60% 60% at 8% 92%,rgba(31,184,201,.18) 0%,transparent 55%),
+  radial-gradient(ellipse 55% 55% at 95% 85%,rgba(13,51,40,.8) 0%,transparent 50%),
+  radial-gradient(ellipse 40% 40% at 78% 18%,rgba(61,232,154,.10) 0%,transparent 60%)}
 .h-grid{
   position:absolute;inset:0;z-index:1;pointer-events:none;
   background-image:linear-gradient(rgba(61,170,134,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(61,170,134,.05) 1px,transparent 1px);
@@ -91,8 +92,8 @@ nav{
 .h-title .sub{display:block;font-size:.5em;font-weight:800;letter-spacing:2px;color:#fff;margin-bottom:4px}
 .h-title .gr{
   display:block;overflow:visible;padding-bottom:.1em;
-  background:linear-gradient(135deg,var(--glt),#8FFFDA 52%,var(--glt));
-  background-size:200% 200%;
+  background:linear-gradient(135deg,#3DE89A 0%,#8FFFDA 35%,#5EE6FF 70%,#3DE89A 100%);
+  background-size:220% 220%;
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
   animation:sh 4s ease infinite;letter-spacing:-2px;
 }
