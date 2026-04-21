@@ -1173,7 +1173,7 @@ html,body{background-color:var(--green4)!important;overscroll-behavior:none;min-
   // Visitor counter
   (function(){
     var badge=document.createElement('div');
-    badge.style.cssText='position:fixed;bottom:20px;left:20px;z-index:598;background:rgba(5,14,8,.88);border:1px solid rgba(61,170,134,.2);color:rgba(255,255,255,.55);font-family:Cairo,sans-serif;font-size:.68rem;padding:5px 11px;border-radius:20px;backdrop-filter:blur(8px);display:flex;align-items:center;gap:5px;direction:rtl;pointer-events:none';
+    badge.style.cssText='position:fixed;bottom:20px;right:20px;z-index:598;background:rgba(5,14,8,.88);border:1px solid rgba(61,170,134,.2);color:rgba(255,255,255,.55);font-family:Cairo,sans-serif;font-size:.68rem;padding:5px 11px;border-radius:20px;backdrop-filter:blur(8px);display:flex;align-items:center;gap:5px;direction:rtl;pointer-events:none';
     badge.innerHTML='<span style="width:5px;height:5px;background:#3DAA86;border-radius:50%;display:inline-block"></span><span id="vc-num">...</span>';
     document.body.appendChild(badge);
     fetch('https://api.counterapi.dev/v1/rawafid-fintech-2026/visits/up')
