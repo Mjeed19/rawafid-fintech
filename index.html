@@ -416,6 +416,16 @@ footer{background:var(--green4);border-top:1px solid rgba(61,170,134,.08);paddin
 }
 html,body{background-color:var(--green4)!important;overscroll-behavior:none;min-height:100%;width:100%;margin:0;padding:0;box-sizing:border-box}
 
+/* ═══ BRAND PATTERN BACKDROP ═══ */
+.brand-bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.07;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='520' height='520' viewBox='0 0 520 520'><g fill='none' stroke='%233DE89A' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'><path d='M40 460 Q 40 360 110 360 Q 180 360 180 460'/><path d='M180 460 Q 180 320 260 320 Q 340 320 340 460'/><path d='M340 460 Q 340 380 400 380 Q 460 380 460 460'/><path d='M70 360 Q 70 240 150 240 Q 230 240 230 360'/><path d='M260 320 Q 260 200 340 200 Q 420 200 420 320'/><path d='M150 240 Q 150 130 230 130 Q 310 130 310 240'/><path d='M340 200 Q 340 100 410 100 Q 480 100 480 200'/><path d='M230 130 Q 230 50 290 50 Q 350 50 350 130'/></g></svg>");
+  background-size:520px 520px;background-repeat:repeat;
+  mask-image:linear-gradient(180deg,transparent 0,black 8%,black 92%,transparent 100%);
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,black 8%,black 92%,transparent 100%);}
+nav,.hero,.reach2,.sec,.lobby-sec,.features-sec,.meeting-sec,.booth-sec,.venue-detail,footer,#packages,#orgs,#contact{position:relative;z-index:1}
+.sec-light,.sec-tinted,.venue-detail{isolation:isolate}
+.sec-light::before,.sec-tinted::before,.venue-detail::before{content:'';position:absolute;inset:0;z-index:-1;background:inherit}
+
 /* ═══ BOOTH OPTIONS ═══ */
 .booth-sec{background:var(--green4);padding:64px 0;border-top:1px solid rgba(61,170,134,.07)}
 .booth-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
@@ -460,6 +470,8 @@ html,body{background-color:var(--green4)!important;overscroll-behavior:none;min-
 </style>
 </head>
 <body style="background-color:#050E08">
+
+<div class="brand-bg" aria-hidden="true"></div>
 
 <!-- NAV -->
 <nav>
