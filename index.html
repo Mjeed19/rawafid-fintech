@@ -416,15 +416,19 @@ footer{background:var(--green4);border-top:1px solid rgba(61,170,134,.08);paddin
 }
 html,body{background-color:var(--green4)!important;overscroll-behavior:none;min-height:100%;width:100%;margin:0;padding:0;box-sizing:border-box}
 
-/* ═══ BRAND PATTERN BACKDROP ═══ */
-.brand-bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.07;
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='520' height='520' viewBox='0 0 520 520'><g fill='none' stroke='%233DE89A' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'><path d='M40 460 Q 40 360 110 360 Q 180 360 180 460'/><path d='M180 460 Q 180 320 260 320 Q 340 320 340 460'/><path d='M340 460 Q 340 380 400 380 Q 460 380 460 460'/><path d='M70 360 Q 70 240 150 240 Q 230 240 230 360'/><path d='M260 320 Q 260 200 340 200 Q 420 200 420 320'/><path d='M150 240 Q 150 130 230 130 Q 310 130 310 240'/><path d='M340 200 Q 340 100 410 100 Q 480 100 480 200'/><path d='M230 130 Q 230 50 290 50 Q 350 50 350 130'/></g></svg>");
-  background-size:520px 520px;background-repeat:repeat;
-  mask-image:linear-gradient(180deg,transparent 0,black 8%,black 92%,transparent 100%);
-  -webkit-mask-image:linear-gradient(180deg,transparent 0,black 8%,black 92%,transparent 100%);}
-nav,.hero,.reach2,.sec,.lobby-sec,.features-sec,.meeting-sec,.booth-sec,.venue-detail,footer,#packages,#orgs,#contact{position:relative;z-index:1}
-.sec-light,.sec-tinted,.venue-detail{isolation:isolate}
-.sec-light::before,.sec-tinted::before,.venue-detail::before{content:'';position:absolute;inset:0;z-index:-1;background:inherit}
+/* ═══ WHY SECTION — BRAND GRAPHIC SYSTEM ═══ */
+#why{background:#0B2F25!important;position:relative;overflow:hidden}
+#why::before{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 900' preserveAspectRatio='xMidYMid slice'><g fill='none' stroke='%2354D996' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'><path d='M520 -40 Q 520 110 620 110 Q 720 110 720 -40'/><path d='M380 60 Q 380 230 500 230 Q 620 230 620 60'/><path d='M640 180 Q 640 360 780 360 Q 920 360 920 180'/><path d='M450 320 Q 450 500 590 500 Q 730 500 730 320'/><path d='M740 460 Q 740 620 860 620 Q 980 620 980 460'/><path d='M520 580 Q 520 740 660 740 Q 800 740 800 580'/><path d='M360 700 Q 360 850 480 850 Q 600 850 600 700'/></g></svg>");
+  background-repeat:no-repeat;background-position:right center;background-size:auto 115%;opacity:.32;
+  mask-image:linear-gradient(270deg,black 0,black 55%,transparent 95%);
+  -webkit-mask-image:linear-gradient(270deg,black 0,black 55%,transparent 95%)}
+#why .wrap{position:relative;z-index:1}
+#why .lbl{color:var(--glt)}#why .lbl::before{background:var(--glt)}
+#why .h2{color:#fff}#why .h2 em{color:var(--glt)}
+#why .wc{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);backdrop-filter:blur(6px)}
+#why .wc:hover{background:rgba(61,232,154,.10);border-color:rgba(61,232,154,.35)}
+#why .wc-t{color:#fff}#why .wc-d{color:rgba(255,255,255,.62)}
 
 /* ═══ BOOTH OPTIONS ═══ */
 .booth-sec{background:var(--green4);padding:64px 0;border-top:1px solid rgba(61,170,134,.07)}
@@ -470,8 +474,6 @@ nav,.hero,.reach2,.sec,.lobby-sec,.features-sec,.meeting-sec,.booth-sec,.venue-d
 </style>
 </head>
 <body style="background-color:#050E08">
-
-<div class="brand-bg" aria-hidden="true"></div>
 
 <!-- NAV -->
 <nav>
