@@ -1176,7 +1176,7 @@ html,body{background-color:var(--green4)!important;overscroll-behavior:none;min-
     badge.style.cssText='position:fixed;bottom:20px;right:20px;z-index:598;background:rgba(5,14,8,.88);border:1px solid rgba(61,170,134,.2);color:rgba(255,255,255,.55);font-family:Cairo,sans-serif;font-size:.68rem;padding:5px 11px;border-radius:20px;backdrop-filter:blur(8px);display:flex;align-items:center;gap:5px;direction:rtl;pointer-events:none';
     badge.innerHTML='<span style="width:5px;height:5px;background:#3DAA86;border-radius:50%;display:inline-block"></span><span id="vc-num">...</span>';
     document.body.appendChild(badge);
-    fetch('https://abacus.jasoncameron.dev/hit/rawafid-fintech-2026/visits')
+    fetch('https://abacus.jasoncameron.dev/hit/rawafid-fintech-2026/visitors')
       .then(function(r){return r.json()})
       .then(function(d){var n=document.getElementById('vc-num');if(n&&d.value)n.textContent=d.value+' زيارة';})
       .catch(function(){var n=document.getElementById('vc-num');if(n)n.textContent='زائر';});
