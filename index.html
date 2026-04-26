@@ -420,7 +420,12 @@ footer{background:var(--green4);border-top:1px solid rgba(61,170,134,.08);paddin
 html,body{background-color:var(--green4)!important;overscroll-behavior:none;min-height:100%;width:100%;margin:0;padding:0;box-sizing:border-box}
 
 /* ═══ WHY SECTION — BRAND IDENTITY ═══ */
-#why{background:#0B2F25!important;position:relative;overflow:hidden}
+#why{background:#163C30!important;position:relative;overflow:hidden}
+#why::before{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 1000' preserveAspectRatio='xMaxYMid slice'><g fill='none' stroke='%235FE3A6' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'><path d='M720 -20 C 720 60 700 100 690 160 C 680 220 640 240 640 300' opacity='0.9'/><path d='M770 -20 C 770 60 750 100 740 160 C 730 220 690 240 690 300' opacity='0.55'/><circle cx='620' cy='350' r='55' opacity='0.9'/><circle cx='620' cy='350' r='75' opacity='0.55'/><path d='M620 405 C 620 470 540 480 530 540' opacity='0.9'/><path d='M620 425 C 620 480 555 490 545 540' opacity='0.55'/><path d='M620 405 C 620 470 700 480 710 540' opacity='0.9'/><path d='M620 425 C 620 480 685 490 695 540' opacity='0.55'/><circle cx='520' cy='590' r='52' opacity='0.9'/><circle cx='520' cy='590' r='72' opacity='0.55'/><circle cx='720' cy='590' r='52' opacity='0.9'/><circle cx='720' cy='590' r='72' opacity='0.55'/><path d='M520 642 C 520 700 450 710 440 770' opacity='0.9'/><path d='M520 642 C 520 700 590 710 600 770' opacity='0.9'/><path d='M720 642 C 720 700 650 710 640 770' opacity='0.9'/><path d='M720 642 C 720 700 790 710 800 770' opacity='0.9'/><circle cx='435' cy='810' r='48' opacity='0.9'/><circle cx='435' cy='810' r='66' opacity='0.55'/><circle cx='600' cy='810' r='48' opacity='0.9'/><circle cx='600' cy='810' r='66' opacity='0.55'/><circle cx='790' cy='810' r='48' opacity='0.9'/><circle cx='790' cy='810' r='66' opacity='0.55'/><path d='M435 858 C 435 920 380 940 370 1000' opacity='0.9'/><path d='M435 858 C 435 920 490 940 500 1000' opacity='0.9'/><path d='M600 858 C 600 920 545 940 535 1000' opacity='0.9'/><path d='M600 858 C 600 920 660 940 670 1000' opacity='0.9'/><path d='M790 858 C 790 920 740 940 730 1000' opacity='0.9'/><path d='M790 858 C 790 920 845 940 855 1000' opacity='0.9'/></g></svg>");
+  background-repeat:no-repeat;background-position:right bottom;background-size:auto 105%;opacity:.65;
+  mask-image:linear-gradient(270deg,black 0,black 30%,transparent 88%);
+  -webkit-mask-image:linear-gradient(270deg,black 0,black 30%,transparent 88%)}
 #why .wrap{position:relative;z-index:1}
 #why .lbl{color:var(--glt)}#why .lbl::before{background:var(--glt)}
 #why .h2{color:#fff}#why .h2 em{color:var(--glt)}
@@ -543,12 +548,9 @@ html,body{background-color:var(--green4)!important;overscroll-behavior:none;min-
 <!-- WHY -->
 <section class="sec sec-light" id="why">
   <div class="wrap">
-    <div class="reveal why-head">
-      <img src="logo.png" alt="روافد فنتك" class="why-logo">
-      <div>
-        <div class="lbl">لماذا تشارك؟</div>
-        <h2 class="h2" style="margin:6px 0 0">ما الذي <em>تكسبه</em> مؤسستك؟</h2>
-      </div>
+    <div class="reveal">
+      <div class="lbl">لماذا تشارك؟</div>
+      <h2 class="h2">ما الذي <em>تكسبه</em> مؤسستك؟</h2>
     </div>
     <div class="why-grid">
       <div class="wc reveal"><span class="wc-i">👁️</span><div class="wc-body"><div class="wc-t">ظهور أمام آلاف الطلبة</div><div class="wc-d">تواجد مباشر أمام أكثر من 3000 طالب وطالبة من كبرى جامعات الرياض المهتمين بالتقنية المالية</div></div></div>
