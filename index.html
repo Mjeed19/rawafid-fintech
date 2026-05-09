@@ -258,6 +258,23 @@ nav{
 .org-tier{margin-top:28px}
 .org-tier-lbl{font-size:.72rem;font-weight:700;letter-spacing:.5px;color:var(--muted);margin-bottom:12px;display:flex;align-items:center;gap:8px}
 .org-tier-lbl::after{content:'';flex:1;height:1px;background:var(--b1)}
+/* CLUBS SECTION */
+.clubs-sec{background:#0D1F17;padding:72px 0;border-top:1px solid rgba(61,170,134,.1)}
+.clubs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.club-card{background:rgba(255,255,255,.04);border:1.5px solid rgba(61,170,134,.15);border-radius:16px;padding:28px 22px 24px;text-align:center;transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden}
+.club-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.3);border-color:rgba(61,170,134,.4)}
+.club-icon{width:60px;height:60px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 16px;background:rgba(61,232,154,.1);border:1px solid rgba(61,232,154,.2)}
+.club-name{font-family:'Cairo',sans-serif;font-size:1.05rem;font-weight:900;color:#fff;margin-bottom:6px;line-height:1.3}
+.club-name-en{font-size:.7rem;font-weight:500;color:rgba(255,255,255,.4);letter-spacing:.3px;margin-bottom:14px}
+.club-role{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;font-weight:800;padding:5px 13px;border-radius:30px;letter-spacing:.2px}
+.club-role.founder{background:rgba(61,232,154,.18);color:#3DE89A;border:1px solid rgba(61,232,154,.35)}
+.club-role.strategic{background:rgba(212,168,75,.15);color:#D4A84B;border:1px solid rgba(212,168,75,.3)}
+.club-role.executive{background:rgba(99,102,241,.15);color:#818CF8;border:1px solid rgba(99,102,241,.3)}
+.club-role::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.8}
+.club-card.founder-card{border-color:rgba(61,232,154,.25)}
+.club-card.founder-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top,rgba(61,232,154,.07) 0%,transparent 65%);pointer-events:none}
+@media(max-width:768px){.clubs-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.clubs-grid{grid-template-columns:1fr}}
 .org-row{display:flex;flex-wrap:wrap;gap:8px}
 .org-chip{display:flex;align-items:center;gap:8px;background:var(--surf);border:1.5px solid var(--b1);border-radius:10px;padding:10px 15px;transition:all .25s;box-shadow:0 1px 6px rgba(27,107,82,.07)}
 .org-chip:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(27,107,82,.1);border-color:var(--b2)}
@@ -996,6 +1013,52 @@ html,body{background-color:var(--green4)!important;overscroll-behavior:none;min-
 </section>
 
 
+
+<!-- CLUBS -->
+<section class="clubs-sec" id="clubs">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center">
+      <div class="lbl" style="justify-content:center;color:#3DE89A">الأندية الطلابية</div>
+      <h2 class="h2" style="text-align:center;color:#fff">الأندية <em>المؤسِّسة</em> للمعرض</h2>
+      <p class="sec-sub" style="text-align:center;color:rgba(255,255,255,.55)">الشراكة التي جعلت روافد فنتك حقيقةً على أرض إمام</p>
+    </div>
+    <div class="clubs-grid reveal">
+
+      <!-- نادي تيكنيشن -->
+      <div class="club-card founder-card">
+        <div class="club-icon">💻</div>
+        <div class="club-name">نادي تيكنيشن</div>
+        <div class="club-name-en">Technician Club</div>
+        <span class="club-role founder">نادي مؤسِّس</span>
+      </div>
+
+      <!-- نادي المالية -->
+      <div class="club-card founder-card">
+        <div class="club-icon">📈</div>
+        <div class="club-name">نادي المالية</div>
+        <div class="club-name-en">Finance Club</div>
+        <span class="club-role founder">نادي مؤسِّس</span>
+      </div>
+
+      <!-- نادي المحاسبة -->
+      <div class="club-card">
+        <div class="club-icon">🧾</div>
+        <div class="club-name">نادي المحاسبة</div>
+        <div class="club-name-en">Accounting Club</div>
+        <span class="club-role strategic">شريك استراتيجي</span>
+      </div>
+
+      <!-- النادي الإعلامي -->
+      <div class="club-card">
+        <div class="club-icon">🎙️</div>
+        <div class="club-name">النادي الإعلامي</div>
+        <div class="club-name-en">Media Club</div>
+        <span class="club-role executive">شريك تنفيذي</span>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- MEETING CTA -->
 <section id="meeting" class="features-sec" style="padding:60px 20px;display:flex;justify-content:center">
