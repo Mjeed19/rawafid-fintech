@@ -5,7 +5,7 @@
 # روافد فنتك — Rawafid Fintech 2026
 
 ### المعرض الأكاديمي للتقنية المالية · جامعة الإمام محمد بن سعود الإسلامية
-
+https://rawafid-fintech.netlify.app   لزيارة الموقع:
 [![Live Site](https://img.shields.io/badge/🌐_الموقع_المباشر-rawafid--fintech.netlify.app-brightgreen?style=for-the-badge)](https://rawafid-fintech.netlify.app)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
